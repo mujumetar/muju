@@ -897,4 +897,13 @@ a {
   opacity: 1;
 }
 
+.spacing {
+  margin: 20px 0px;
+}
+
+.profile-btns {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+}
 /* ------------ slider css */
