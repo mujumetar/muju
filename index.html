@@ -84,6 +84,25 @@
       <img class="profile" src="/img/profile.jpg" alt="profile" />
     </div>
 
+    <div class="dot-fill1 fade"></div>
+    <div class="dot-stroke1 fade"></div>
+    <div class="dot-fill2"></div>
+    <div class="dot-stroke2"></div>
+    <div class="box-icon">
+      <div class="icon-overlay-main">
+        <div class="icons-main">
+          <div class="soc-overlay-fade">
+            <a href="https://www.instagram.com/muju_metar" target="_blank"><i
+                class="ri-instagram-line over-icons"></i></a>
+          </div>
+          <div class="soc-overlay-fade">
+            <a href="https://www.telegram.me/@Moviesmania_desk" target="_blank"><i
+                class="ri-telegram-2-line over-icons"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="box1" id="Skills">
       <h2>Muzammil</h2>
       <p class="tagline">
@@ -104,7 +123,7 @@
       <div class="profile-btns spacing">
         <a href="/img/resume.png" download="resume-muju" class="demo-btn"><i class="ri-download-2-fill"></i>
           &nbsp;resume</a>
-        <a href="#contactus" class="demo-btn"><i class="ri-phone-line"></i>
+        <a href="https://wa.link/skuqv4" class="demo-btn" target="_blank"><i class="ri-phone-line"></i>
           &nbsp;Hire Me</a>
       </div>
 
@@ -164,11 +183,19 @@
     </div>
   </div>
 
+
+
   <div class="container container-xl">
     <div class="project-main">
       <div class="project w-lg w-sm w-s">
         <div class="project-img">
           <img src="/img/edgecut.png" alt="" />
+
+          <!-- <div class="overlay">
+            <a href="https://edgecut-muju.vercel.app/" class="demo-btn-hover" target="_blank"><i
+              class="ri-eye-line"></i>&nbsp;Demo</a>
+          </div> -->
+
         </div>
         <div class="project-demo">
           <a href="https://edgecut-muju.vercel.app/" class="demo-btn" target="_blank"><i
@@ -180,7 +207,7 @@
           <img src="/img/adminator.png" alt="" />
         </div>
         <div class="project-demo">
-          <a href="https://github.com/WebersIO/html/tree/main/adminator%20by%20muju" class="demo-btn" target="_blank"><i
+          <a href="https://adminpanel-muju.vercel.app/" class="demo-btn" target="_blank"><i
               class="ri-eye-line"></i>&nbsp;Demo</a>
         </div>
       </div>
@@ -250,7 +277,7 @@
       <label for="">Enter Your Message</label>
       <br />
       <textarea name="textarea" id="" placeholder="Message"></textarea>
-      <button class="btn">Send Message!</button>
+      <button class="btn"><a href="mailto:muzammilmetar82@gmail.com">Send Message!</a></button>
     </div>
   </div>
 
@@ -315,10 +342,9 @@
       $(".nav").slideToggle(1200);
     })
 
-    //  $(".moon").click(function(){
-    //   $("body").removeClass(".day");
-    //   $("body").addClass(".night");
-    //  })
+    // $(".profile").click(function () {
+    //   $(".icon-overlay-main").slideToggle(500);
+    // })
 
     $(".theme-btn").click(function () {
       if ($("body").hasClass("day")) {
@@ -333,6 +359,7 @@
         $(".profile").css("box-shadow", " rgba(0, 0, 0, 0.35) 0px 5px 15px")
         $("body").css("background-color", "#292929")
         $("div").css("background-color", "#292929")
+        $(".over-icons").css("background-color", "#292929")
         $("footer").css("background-color", "#3e3d3d")
         $("a").css("color", "white")
 
@@ -345,6 +372,7 @@
         $(".profile").css("box-shadow", " rgba(0, 0, 0, 0.35) 0px 5px 15px")
         $("body").css("background-color", "white")
         $("div").css("background-color", "white")
+        $(".over-icons").css("background-color", "white")
         $("footer").css("background-color", "#FF0000")
         $(".red").css("background-color", "#FF0000")
         $("a").css("color", "black")
@@ -379,6 +407,7 @@
 
   <script>
     jQuery(document).ready(function ($) {
+
       //set animation timing
       var animationDelay = 2500,
         //loading bar effect
