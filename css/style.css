@@ -21,7 +21,7 @@ header {
   position: fixed;
   top: 0px;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 
 .navbar {
@@ -115,6 +115,7 @@ nav {
 .box1 {
   max-width: 100%;
   display: flex;
+  cursor: pointer;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -947,6 +948,7 @@ a {
 .profile-btns {
   display: flex;
   width: 50%;
+  z-index: 2;
   justify-content: space-evenly;
 }
 
@@ -1011,6 +1013,7 @@ a {
 
 .soc-overlay-fade {
   margin: 20px;
+  z-index: 2;
 }
 
 .icon-overlay-main {
