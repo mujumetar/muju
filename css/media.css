@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .nav {
     display: none;
     flex-direction: column;
@@ -10,6 +10,10 @@
     width: 100%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 10px;
+  }
+
+  .profile-btns {
+    flex-direction: column;
   }
 
   .float {
@@ -120,6 +124,24 @@
     display: flex;
     flex-direction: column;
   }
+
+  .demo-btn {
+    display: flex;
+  }
+
+  .icons-main {
+    flex-direction: row;
+  }
+
+  .dot-stroke1{
+  }
+  .dot-stroke1{
+  }
+  .dot-fill1 {
+  }  
+  .dot-fill2 {
+  }  
+
 }
 
 @media (max-width: 1199px) {
@@ -130,6 +152,11 @@
   .project-lg {
     width: 100%;
   }
+
+  .dot-stroke1{
+    top: 8%;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -156,4 +183,5 @@
     width: 90%;
     padding: 30px 10px;
   }
+
 }
