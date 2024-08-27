@@ -80,7 +80,12 @@
       </div>
     </nav>
   </header>
+  <div id="particles-js"></div>
 
+  <!-- stats - count particles -->
+  <div class="count-particles">
+    <span class="js-count-particles">--</span> particles
+  </div>
   <div class=" container-xl profile-main">
     <div id="particles-js"></div>
 
@@ -591,7 +596,7 @@
             "color": "#000000"
           },
           "polygon": {
-            "nb_sides": 5
+            "nb_sides": 6
           },
           "image": {
             "src": "img/github.svg",
@@ -649,14 +654,14 @@
             "mode": "grab"
           },
           "onclick": {
-            "enable": true,
+            "enable": false,
             "mode": "push"
           },
-          "resize": true
+          "resize":true
         },
         "modes": {
           "grab": {
-            "distance": 140,
+            "distance": 130,
             "line_linked": {
               "opacity": 1
             }
