@@ -13,6 +13,8 @@
 
 body {
     transition: all 2s ease-in-out;
+    position: relative;
+    background-color: transparent;
 }
 
 .mono {
@@ -20,7 +22,7 @@ body {
 }
 
 header {
-    background-color: white;
+   
     position: fixed;
     top: 0px;
     width: 100%;
@@ -88,12 +90,12 @@ footer>a {
 h1{
   font-weight: 200;
 }
-.container span{
+.container .span{
     color: red; 
     font-family: monospace;
     font-weight: bolder;
 }
-.container span::after{
+.container .span::after{
     content: '|';
     animation-name: blinking; 
     animation-duration: .71s; 
