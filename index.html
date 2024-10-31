@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
-    <!-- <link rel="stylesheet" href="/css/style.css" /> -->
+    <link rel="stylesheet" href="/css/style.css"/>
     <!-- <link rel="stylesheet" href="/css/media.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,91 +35,7 @@
     <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
   </head>
 
-  <style>
-    :root {
-      --mono:#e08e88;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-      /* border: 1px solid red; */
-      scroll-behavior: smooth;
-    }
 
-    body {
-      transition: all 2s ease-in-out;
-    }
-
-    .mono {
-      font-family: monospace;
-    }
-
-    header {
-      background-color: white;
-      position: fixed;
-      top: 0px;
-      width: 100%;
-      z-index: 3;
-    }
-
-    .skill-slider {
-      width: 100%;
-      padding: 20px 2px;
-      overflow-x: hidden;
-    }
-
-    .slider-main {
-      width: 4000px;
-      display: flex;
-      position: relative;
-      animation: slide 10s infinite alternate;
-      margin-left: -2000px;
-      -webkit-animation: slide 10s infinite alternate;
-    }
-
-    .slide p {
-      padding: 20px;
-      text-shadow: -1px 2px 12px rgba(0, 0, 0, 0.75);
-    }
-
-    a {
-      color: black;
-    }
-
-    .slide {
-      width: 200px;
-      margin: 20px;
-      border-radius: 20px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      text-align: center;
-      background-color: white;
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      -ms-border-radius: 20px;
-      -o-border-radius: 20px;
-    }
-
-    .slide > i {
-      font-size: 150px;
-      text-shadow: -1px 2px 12px rgba(25, 0, 252, 0.75);
-    }
-
-    @keyframes slide {
-      from {
-        margin-left: -1000px;
-      }
-
-      to {
-        margin-left: 0px;
-      }
-    }
-
-    .hero {
-      height: 100%;
-    }
-  </style>
 
   <body class="day">
     <header>
@@ -241,7 +157,16 @@
             <div class="col-lg-12 ">
               <h1 class="display-1 fw-bolder">Muzammil</h1>
             </div>
-            <div class="col-lg-12 ">1</div>
+            <div class="col-lg-12 ">
+
+              <div class="container">
+                <div class="typing-container">
+                    <h1> I AM&nbsp;<span typing-speed="70" typing-delay="1000" words="Web Developer,Passionate Developer,Student"></span> </h1>
+                </div>
+            </div>
+            
+
+            </div>
             <div class="col-lg-12 ">
               <p class="mono text-center" style="color: var(--mono);">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
@@ -514,6 +439,15 @@
       </div>
     </div>
 
+
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="mono fs-1 fw-bolder">Contact Us</h2>
+        </div>
+      </div>
+    </div>
+
     <div class="container my-5">
       <div class="row">
         <div class="col-lg-6 col-md-12 border">
@@ -676,38 +610,77 @@
       });
     </script>
 
-    <div class="float position-fixed bg-white shadow border top-50">
-      <div class="socialicons">
-        <div class="icon">
+    <div class="float position-fixed bg-white shadow border top-50 rounded-start-2">
+      <div class="socialicons p-2 bg-dark rounded-end-4">
+        <div class="icon p-2">
           <a href="#" class="fab" title="Home"
-            ><button class="soc" title="Home">
+            ><button class="soc p-2 rounded-circle" title="Home">
               <i class="ri-home-4-line"></i></button
           ></a>
         </div>
-        <div class="icon">
-          <a href="#Skills" class="fab" title="Skills"
-            ><button class="soc" title="Skills">
+        <div class="icon p-2">
+          <a href="#skills" class="fab" title="Skills"
+            ><button class="soc p-2 rounded-circle" title="Skills">
               <i class="ri-lightbulb-flash-line"></i></button
           ></a>
         </div>
-        <div class="icon">
+        <div class="icon p-2">
           <a
             href="https://github.com/WebersIO"
             class="fab"
             title="GitHub"
             target="_blank"
-            ><button class="soc" title="GitHub">
+            ><button class="soc p-2 rounded-circle" title="GitHub">
               <i class="fa-brands fa-github"></i></button
           ></a>
         </div>
-        <div class="icon">
+        <div class="icon p-2">
           <a href="#contactus" class="fab" title="Contact"
-            ><button class="soc" title="Contact">
+            ><button class="soc p-2 rounded-circle" title="Contact">
               <i class="ri-contacts-book-line"></i></button
           ></a>
         </div>
       </div>
     </div>
+
+    <script>
+   var wordsToType = document.querySelector("span[words]").getAttribute("words").split(','), 
+            typer =  document.querySelector("span[words]"), 
+            typingSpeed = (parseInt(typer.getAttribute('typing-speed')) || 70), 
+            typingDelay = (parseInt(typer.getAttribute('typing-delay')) || 700);
+    
+var currentWordIndex = 0, currentCharacterIndex = 0; 
+
+function type(){
+
+    var wordToType = wordsToType[currentWordIndex%wordsToType.length];
+
+    if(currentCharacterIndex < wordToType.length){
+        typer.innerHTML += wordToType[currentCharacterIndex++];
+        setTimeout(type, typingSpeed);
+    }else{
+
+        setTimeout(erase, typingDelay);
+    }
+
+}
+function erase(){
+    var wordToType = wordsToType[currentWordIndex%wordsToType.length]; 
+    if(currentCharacterIndex >0){
+        typer.innerHTML = wordToType.substr(0, --currentCharacterIndex -1);
+        setTimeout(erase, typingSpeed);
+    }else{
+
+        currentWordIndex++; 
+        setTimeout(type, typingDelay);
+    }
+
+}
+
+window.onload = function(){
+    type(); 
+}
+    </script>
 
     <script>
       particlesJS("particles-js", {
