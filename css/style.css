@@ -109,3 +109,18 @@ h1{
         color: red; 
     }
 }
+
+.particles-js {
+    height: 100vh;
+}
+
+.muju {
+    border-radius: 55% 45% 69% 31% / 42% 22% 78% 58% ;
+}
+
+.muju-main {
+    padding: 3px;
+    background-color: white;
+    border-radius: 55% 45% 69% 31% / 42% 22% 78% 58% ;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
