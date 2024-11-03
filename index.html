@@ -1,409 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-    <link rel="stylesheet" href="/css/style.css"/>
-    <!-- <link rel="stylesheet" href="/css/media.css" /> -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
-      rel="stylesheet"
-    />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>portfolio</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <!-- <link rel="stylesheet" href="/css/media.css" /> -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet" />
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-  </head>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+</head>
 
 
 
-  <body class="day">
-    
-    <header class="mb-5">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white shadow">
-        <div class="container-fluid">
-          <a class="navbar-brand fw-bolder" href="#" >Muju</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Projects
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      target="_blank"
-                      href="http://fruitables-phi.vercel.app/"
-                      >Fruitables</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      target="_blank"
-                      href="https://courses-sage-iota.vercel.app/"
-                      >Courses</a
-                    >
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li><a class="dropdown-item" href="#">My shop</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#skills">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  target="_blank"
-                  href="https://github.com/mujumetar"
-                  >Git</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  target="_blank"
-                  href="mailto:mujuwork3@gmail.com"
-                  ><i class="ri-mail-line"></i></a
-                >
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <button class="btn btn-outline-success" type="submit">
-                Contact
-              </button>
-            </form>
+<body class="day">
+
+  <header class="mb-5">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white shadow py-4">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bolder" href="#">Muju</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Projects
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" target="_blank" href="http://fruitables-phi.vercel.app/">Fruitables</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" target="_blank" href="https://courses-sage-iota.vercel.app/">Courses</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">My shop</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="https://github.com/mujumetar">Git</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="mailto:mujuwork3@gmail.com"><i class="ri-mail-line"></i></a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <button class="btn btn-outline-success" type="submit">
+              Contact
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div id="particles-js" class="position-absolute top-0 mb-5 w-100"></div>
+  <div class="count-particles w-100">
+    <span class="js-count-particles"></span>
+  </div>
+
+  <div class="container my-5">
+    '
+  </div>
+
+  <div class="container my-5 hero d-flex judtify-content-center align-items-center" data-aos="fade-up"
+    data-bs-duration="2000ms">
+
+    <div class="row">
+      
+        <div class="col-lg-4 col-12 muju-main2">
+          <div class="muju-main">
+            <img src="/img/profile.jpg" alt="muzammil" class="img-fluid p-2 muju" />
           </div>
         </div>
-      </nav>
-    </header>
-    <div id="particles-js" class="position-absolute top-0 mb-5 w-100"></div>
-    <div class="count-particles w-100">
-      <span class="js-count-particles"></span>
-    </div>
-   
-    <div class="container my-5">
-'
-    </div>
-
-    <div class="container my-5 hero d-flex judtify-content-center align-items-center" data-aos="fade-up" data-bs-duration="2000ms">
     
-      <div class="row" >
-        <div class="col-lg-4 col-12 muju-main" >
-          <img src="/img/profile.jpg" alt="muzammil" class="img-fluid py-2 muju" />
-        </div>
-        <div
-          class="col-lg-1 col-12  d-flex align-items-center justify-content-center"
-        >
-          <div class="row  text-center" >
-            <div class="col-12">
-              <a href="#" class="text-decoration-none text-dark"><i class="ri-instagram-line"></i></a>
-            </div>
-            <div class="col-12">
-              <a href="#" class="text-decoration-none text-dark"><i class="ri-telegram-2-line"></i></a>
-            </div>
-            <div class="col-12">
-              <a href="#" class="text-decoration-none text-dark"></a>
-            </div>
+
+      <div class="col-lg-1 col-12  d-flex align-items-center justify-content-center">
+        <div class="row  text-center">
+          <div class="col-12">
+            <a href="#" class="text-decoration-none text-dark"><i class="ri-instagram-line"></i></a>
+          </div>
+          <div class="col-12">
+            <a href="#" class="text-decoration-none text-dark"><i class="ri-telegram-2-line"></i></a>
+          </div>
+          <div class="col-12">
+            <a href="#" class="text-decoration-none text-dark"></a>
           </div>
         </div>
+      </div>
 
-        <div
-          class="col-lg-7 col-12  d-flex align-items-center justify-content-center"
-        >
-          <div class="row text-center">
-            <div class="col-lg-12 ">
-              <h1 class="display-1 fw-bolder">Muzammil</h1>
-            </div>
-            <div class="col-lg-12 ">
+      <div class="col-lg-7 col-12  d-flex align-items-center justify-content-center">
+        <div class="row text-center">
+          <div class="col-lg-12 ">
+            <h1 class="display-1 fw-bolder">Muzammil</h1>
+          </div>
+          <div class="col-lg-12 ">
 
-              <div class="container">
-                <div class="typing-container">
-                    <h1> I AM&nbsp;<span class="span" typing-speed="70" typing-delay="1000" words="Web Developer,Passionate Developer,Student"></span> </h1>
-                </div>
+            <div class="container">
+              <div class="typing-container">
+                <h1> I AM <br> &nbsp;<span class="span" typing-speed="70" typing-delay="1000"
+                    words="Web Developer,Web Designer,Student"></span> </h1>
+              </div>
             </div>
-            
 
-            </div>
-            <div class="col-lg-12 ">
-              <p class="mono text-center" style="color: var(--mono);">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                fugit aut deleniti sed cum soluta ab quisquam explicabo tempore
-                error.
-              </p>
-            </div>
-            <div class="col-lg-12 ">
-              <a href="tel:7874536227"><button class="btn btn-outline-success"><i class="ri-phone-line"></i> &nbsp; Hire me</button></a>
-              <a href="/img/resume.png" target="_blank"><button id="skills" class="btn btn-outline-success">
+
+          </div>
+          <div class="col-lg-12 ">
+            <p class="mono text-center" style="color: var(--mono);">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+              fugit aut deleniti sed cum soluta ab quisquam explicabo tempore
+              error.
+            </p>
+          </div>
+          <div class="col-lg-12 ">
+            <a href="tel:7874536227"><button class="btn btn-outline-success"><i class="ri-phone-line"></i> &nbsp; Hire
+                me</button></a>
+            <a href="/img/resume.png" target="_blank"><button id="skills" class="btn btn-outline-success">
                 <i class="ri-download-2-line"></i> &nbsp;Resume
               </button></a>
-            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container" data-aos="fade-up" data-bs-duration="800">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="mono fs-1 fw-bolder">Skills</h2>
-        </div>
+  <div class="container" data-aos="fade-up" data-bs-duration="800">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="mono fs-1 fw-bolder">Skills</h2>
       </div>
     </div>
+  </div>
 
-    <div class="skill-slider container" data-aos="fade-up" data-bs-duration="2000ms">
-      <div class="slider-main" data-aos="fade-right" data-bs-duration="3000ms">
-        <div class="slide" >
-          <i class="ri-vuejs-fill"></i><br />
-          <p>Vue Js</p>
-        </div>
-        <div class="slide">
-          <i class="ri-tailwind-css-fill"></i><br />
-          <p>Tailwind CSS</p>
-        </div>
-        <div class="slide">
-          <i class="ri-angularjs-fill"></i><br />
-          <p>Angular Js</p>
-        </div>
-        <div class="slide">
-          <i class="ri-vuejs-fill"></i><br />
-          <p>Vue Js</p>
-        </div>
-        <div class="slide">
-          <i class="fa-brands fa-python"></i><br />
-          <p>Python</p>
-        </div>
-        <div class="slide">
-          <i class="ri-nodejs-line"></i><br />
-          <p>Node Js</p>
-        </div>
-        <div class="slide">
-          <i class="ri-javascript-fill"></i><br />
-          <p>Js</p>
-        </div>
-        <div class="slide">
-          <i class="ri-css3-fill"></i><br />
-          <p>CSS</p>
-        </div>
-        <div class="slide">
-          <i class="ri-reactjs-line"></i><br />
-          <p>React Js</p>
-        </div>
-        <div class="slide">
-          <i class="fa-brands fa-python"></i><br />
-          <p>Python</p>
-        </div>
-        <div class="slide">
-          <i class="ri-html5-fill"></i><br />
-          <p>HTML 5</p>
-        </div>
-        <div class="slide">
-          <i class="ri-css3-fill"></i><br />
-          <p>CSS</p>
-        </div>
+  <div class="skill-slider container" data-aos="fade-up" data-bs-duration="2000ms">
+    <div class="slider-main" data-aos="fade-right" data-bs-duration="3000ms">
+      <div class="slide">
+        <i class="ri-vuejs-fill"></i><br />
+        <p>Vue Js</p>
+      </div>
+      <div class="slide">
+        <i class="ri-tailwind-css-fill"></i><br />
+        <p>Tailwind CSS</p>
+      </div>
+      <div class="slide">
+        <i class="ri-angularjs-fill"></i><br />
+        <p>Angular Js</p>
+      </div>
+      <div class="slide">
+        <i class="ri-vuejs-fill"></i><br />
+        <p>Vue Js</p>
+      </div>
+      <div class="slide">
+        <i class="fa-brands fa-python"></i><br />
+        <p>Python</p>
+      </div>
+      <div class="slide">
+        <i class="ri-nodejs-line"></i><br />
+        <p>Node Js</p>
+      </div>
+      <div class="slide">
+        <i class="ri-javascript-fill"></i><br />
+        <p>Js</p>
+      </div>
+      <div class="slide">
+        <i class="ri-css3-fill"></i><br />
+        <p>CSS</p>
+      </div>
+      <div class="slide">
+        <i class="ri-reactjs-line"></i><br />
+        <p>React Js</p>
+      </div>
+      <div class="slide">
+        <i class="fa-brands fa-python"></i><br />
+        <p>Python</p>
+      </div>
+      <div class="slide">
+        <i class="ri-html5-fill"></i><br />
+        <p>HTML 5</p>
+      </div>
+      <div class="slide">
+        <i class="ri-css3-fill"></i><br />
+        <p>CSS</p>
       </div>
     </div>
+  </div>
 
-    <div class="container my-5" data-aos="fade-up" data-bs-duration="2000ms">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="mono fs-1 fw-bolder">Projects</h2>
-        </div>
+  <div class="container my-5" data-aos="fade-up" data-bs-duration="2000ms">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="mono fs-1 fw-bolder">Projects</h2>
       </div>
     </div>
+  </div>
 
-    <div class="container" data-aos="fade-up" data-bs-duration="2000ms">
-      <div class="row g-4">
-        <div class="col-lg-4 col-md-6 col-sm-10">
-          <div class="row">
-            <div class="col-12 shadow p-2 rounded-3" data-aos="fade-up" data-bs-duration="3000ms">
-              <div class="col-lg-12  rounded-3 ">
-                <img
-                  src="/img/fruitables.png"
-                  alt="fruitables"
-                  class="img-fluid"
-                />
-              </div>
-              <div class="col-lg-12 text-center py-2">
-                <a href="#"
-                  ><button class="btn btn-outline-success">
-                    <i class="ri-eye-2-line"></i> &nbsp;  Demo
-                  </button></a
-                >
-              </div>
+  <div class="container" data-aos="fade-up" data-bs-duration="2000ms">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 col-sm-10">
+        <div class="row">
+          <div class="col-12 shadow p-2 rounded-3" data-aos="fade-up" data-bs-duration="3000ms">
+            <div class="col-lg-12  rounded-3 ">
+              <img src="/img/fruitables.png" alt="fruitables" class="img-fluid" />
+            </div>
+            <div class="col-lg-12 text-center py-2">
+              <a href="#"><button class="btn btn-outline-success">
+                  <i class="ri-eye-2-line"></i> &nbsp; Demo
+                </button></a>
             </div>
           </div>
         </div>
- 
-        
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <div class="container my-5" data-aos="fade-up" data-bs-duration="2000ms">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="mono fs-1 fw-bolder">Contact Us</h2>
       </div>
     </div>
+  </div>
 
-
-    <div class="container my-5" data-aos="fade-up" data-bs-duration="2000ms">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="mono fs-1 fw-bolder">Contact Us</h2>
-        </div>
+  <div class="container my-5" data-aos="fade-up" data-bs-duration="2000ms">
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59286.75796773073!2d72.11370650678357!3d21.763908263528943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f5081abb84e2f%3A0xf676d64c6e13716c!2sBhavnagar%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1718966863326!5m2!1sen!2sin"
+          width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" class="shadow" data-aos="fade-right"
+          data-bs-duration="3000"></iframe>
       </div>
-    </div>
-
-    <div class="container my-5" data-aos="fade-up" data-bs-duration="2000ms">
-      <div class="row">
-        <div class="col-lg-6 col-md-12">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59286.75796773073!2d72.11370650678357!3d21.763908263528943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f5081abb84e2f%3A0xf676d64c6e13716c!2sBhavnagar%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1718966863326!5m2!1sen!2sin"
-            width="100%"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            class="shadow"
-            data-aos="fade-right"
-            data-bs-duration="3000"
-          ></iframe>
-        </div>
-        <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center flex-column"  data-aos="fade-left"
+      <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center flex-column" data-aos="fade-right"
         data-bs-duration="3000">
-          
-<form action="https://api.web3forms.com/submit" method="POST" class="d-flex justify-content-center align-items-center flex-column w-100 border h-100 p-3 shadow " >
 
-  <p class="h2 mono">Contact Us</p>
+        <form action="https://api.web3forms.com/submit" method="POST"
+          class="d-flex justify-content-center align-items-center flex-column w-100 border h-100 p-3 shadow ">
 
-  <!-- Replace with your Access Key -->
-  <input type="hidden" name="access_key" value="aa9417ca-c7b3-4ba6-811d-6e001f8d7718" >
+          <p class="h2 mono">Contact Us</p>
 
-  <!-- Form Inputs. Each input must have a name="" attribute -->
+          <!-- Replace with your Access Key -->
+          <input type="hidden" name="access_key" value="aa9417ca-c7b3-4ba6-811d-6e001f8d7718">
 
-  <input type="text" name="name" required class="w-100 form-control-sm px-2 my-3 border-1 " placeholder="Enter Your Name">
-  <input type="email" name="email" required  class="w-100 form-control-sm px-2 my-3 border-1 "  placeholder="Enter Your Email">
-  <textarea name="message" required  class="w-100 form-control-sm px-2 my-3 border-1 "  placeholder="Message" style="height: 150px;"></textarea>
+          <!-- Form Inputs. Each input must have a name="" attribute -->
 
-  <!-- Honeypot Spam Protection -->
-  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+          <input type="text" name="name" required class="w-100 form-control-sm px-2 my-3 border-1 "
+            placeholder="Enter Your Name">
+          <input type="email" name="email" required class="w-100 form-control-sm px-2 my-3 border-1 "
+            placeholder="Enter Your Email">
+          <textarea name="message" required class="w-100 form-control-sm px-2 my-3 border-1 " placeholder="Message"
+            style="height: 150px;"></textarea>
 
-  <!-- Custom Confirmation / Success Page -->
-  <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+          <!-- Honeypot Spam Protection -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-  <button type="submit" class=" btn btn-outline-success">Submit Form</button>
+          <!-- Custom Confirmation / Success Page -->
+          <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
 
-</form>
+          <button type="submit" class=" btn btn-outline-success">Submit Form</button>
 
-        </div>
+        </form>
+
       </div>
     </div>
+  </div>
 
-    <footer class="pt-3" data-aos="fade-up" data-bs-duration="2000ms">
-      <div class="container">
-        <div class="row d-flex align-items-center mb-3 mt-5">
-          <div class="col-lg-4 col-md-12">
-            <h1 class="pr-clr fw-bolder fs-1 my-0 py-0">Muju</h1>
-            <p class="pr-clr">Web Developer</p>
-          </div>
-          <div class="col-lg-4 col-md-12 py-3 ">
-            <div class="input-group rounded-5">
-              <input type="email" class="form-control rounded-start-5 subscribe"
-                aria-label="Dollar amount (with dot and two decimal places)">
-              <span class="input-group-text rounded-end-5 bg-primary-clr">Subscribe</span>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-12 text-end d-flex justify-content-end align-items-center">
-            <p><i class="ri-twitter-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"></i></p>
-            <p><i class="ri-facebook-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"></i></p>
-            <p><i class="ri-youtube-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"></i></p>
-            <p><i class="ri-linkedin-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"></i></p>
+  <div class="pt-3" data-aos="fade-up" data-bs-duration="2000ms">
+    <div class="container">
+      <div class="row d-flex align-items-center mb-3 mt-5">
+        <div class="col-lg-4 col-md-12">
+          <h1 class="pr-clr fw-bolder fs-1 my-0 py-0">Muju</h1>
+          <p class="pr-clr">Web Developer</p>
+        </div>
+        <div class="col-lg-4 col-md-12 py-3 ">
+          <div class="input-group rounded-5">
+            <input type="email" class="form-control rounded-start-5 subscribe"
+              aria-label="Dollar amount (with dot and two decimal places)">
+            <span class="input-group-text rounded-end-5 bg-primary-clr">Subscribe</span>
           </div>
         </div>
-  
-        <hr class="border-warnings border-1 opacity-100">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="first  lh-lg text-dark my-4">
-                <h4 class="fw-bold pb-2">Why People Like us!</h4>
-                <p class="anchor-text mb-4">typesetting, remaining essentially unchanged. It was popularised in the
-                  1960s with
-                  the like Aldus
-                  PageMaker including of Lorem Ipsum.</p>
-                <button class="btn btn-outline-warning rounded-5 py-2 px-3">Read More</button>
-              </div>
+        <div class="col-lg-4 col-md-12 text-end d-flex justify-content-end align-items-center">
+          <p><i class="ri-twitter-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"></i></p>
+          <p><i class="ri-facebook-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"></i></p>
+          <p><i class="ri-youtube-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"></i></p>
+          <p><i class="ri-linkedin-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"></i></p>
+        </div>
+      </div>
+
+      <hr class="border-warnings border-1 opacity-100">
+      <div class="container">
+        <div class="row gy-3">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="first  lh-lg text-dark my-4">
+              <h4 class="fw-bold pb-1">Why People Like us!</h4>
+              <p class="anchor-text mb-4">typesetting, remaining essentially unchanged. It was popularised in the
+                1960s with
+                the like Aldus
+                PageMaker including of Lorem Ipsum.</p>
+              <button class="btn btn-outline-warning rounded-5 py-2 px-3">Read More</button>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="first lh-lg text-dark d-flex flex-column g-2">
-                <h4 class="fw-bold pb-2">Info</h4>
-                <a href="#" class="anchor-hover text-decoration-none anchor-text">About Us</a>
-                <a href="#" class="anchor-hover text-decoration-none anchor-text">Contact Us</a>
-                <a href="#" class="anchor-hover text-decoration-none anchor-text">Privacy Policy</a>
-                <a href="#" class="anchor-hover text-decoration-none anchor-text">Terms & Conditions</a>
-                <a href="#" class="anchor-hover text-decoration-none anchor-text">Return Policy</a>
-                <a href="#" class="anchor-hover text-decoration-none anchor-text">FAQs & Help</a>
-  
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="first lh-lg text-dark d-flex flex-column g-2">
+              <h4 class="fw-bold pb-1">Info</h4>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">About Us</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">Contact Us</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">Privacy Policy</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">Terms & Conditions</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">Return Policy</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">FAQs & Help</a>
+
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="first lh-lg  text-dark d-flex flex-column g-lg-2">
-                <h4 class="fw-bold pb-2">Account</h4>
-                <a href="#" class="anchor-hover text-decoration-none anchor-text">My Account</a>
-                <a href="#" class="anchor-hover text-decoration-none anchor-text">Shop Details</a>
-                <a href="#" class="anchor-hover text-decoration-none anchor-text">Shopping Cart</a>
-                <a href="#" class="anchor-hover text-decoration-none anchor-text">Wishlist</a>
-                <a href="#" class="anchor-hover text-decoration-none anchor-text">Order History</a>
-                <a href="#" class="anchor-hover text-decoration-none anchor-text">International Orders</a>
-  
-              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="first lh-lg  text-dark d-flex flex-column g-lg-2">
+              <h4 class="fw-bold pb-1">Account</h4>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">My Account</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">Shop Details</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">Shopping Cart</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">Wishlist</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">Order History</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">International Orders</a>
+
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div class="first lh-lg  text-dark"></div>
-              <h4 class="text-dark fw-bold pb-2">Contact</h4>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="first lh-lg  text-dark">
+              <h4 class="text-dark fw-bold pb-1">Contact</h4>
               <p class="anchor-text anchor-hover">Muzammilmetar82@gmail.com</p>
               <p class="anchor-text anchor-hover">Address : 📍 Bhavnagar , IND</p>
               <p class="anchor-text anchor-hover">Phone : +91 7874536227</p>
@@ -412,18 +364,20 @@
           </div>
         </div>
       </div>
-  
-  
-  
-  
-      <div class="container my-3">
-        <hr class="border-warnings border-1 opacity-100">
-        <div class="row">
-          <div class="col-lg-12 text-center text-dark">
-            <p><b>Made With &hearts; By &nbsp; <span class="fs-3 fw-bold">Mujju</span> </b></p>
-          </div>
+    </div>
+
+
+
+
+
+    <div class="container my-3">
+      <hr class="border-warnings border-1 opacity-100">
+      <div class="row">
+        <div class="col-lg-12 text-center text-dark">
+          <p><b>Made With &hearts; By &nbsp; <span class="fs-3 fw-bold">Mujju</span> </b></p>
         </div>
       </div>
+    </div>
 
     <script>
       $(".menu").click(function () {
@@ -464,7 +418,7 @@
         }
       });
     </script>
-<!-- 
+    <!-- 
     <div class="float position-fixed bg-white shadow border top-50 rounded-start-2" data-aos="fade-up" data-bs-duration="2000ms">
       <div class="socialicons p-2 bg-dark rounded-end-4">
         <div class="icon p-2">
@@ -499,42 +453,42 @@
     </div> -->
 
     <script>
-   var wordsToType = document.querySelector("span[words]").getAttribute("words").split(','), 
-            typer =  document.querySelector("span[words]"), 
-            typingSpeed = (parseInt(typer.getAttribute('typing-speed')) || 70), 
-            typingDelay = (parseInt(typer.getAttribute('typing-delay')) || 700);
-    
-var currentWordIndex = 0, currentCharacterIndex = 0; 
+      var wordsToType = document.querySelector("span[words]").getAttribute("words").split(','),
+        typer = document.querySelector("span[words]"),
+        typingSpeed = (parseInt(typer.getAttribute('typing-speed')) || 70),
+        typingDelay = (parseInt(typer.getAttribute('typing-delay')) || 700);
 
-function type(){
+      var currentWordIndex = 0, currentCharacterIndex = 0;
 
-    var wordToType = wordsToType[currentWordIndex%wordsToType.length];
+      function type() {
 
-    if(currentCharacterIndex < wordToType.length){
-        typer.innerHTML += wordToType[currentCharacterIndex++];
-        setTimeout(type, typingSpeed);
-    }else{
+        var wordToType = wordsToType[currentWordIndex % wordsToType.length];
 
-        setTimeout(erase, typingDelay);
-    }
+        if (currentCharacterIndex < wordToType.length) {
+          typer.innerHTML += wordToType[currentCharacterIndex++];
+          setTimeout(type, typingSpeed);
+        } else {
 
-}
-function erase(){
-    var wordToType = wordsToType[currentWordIndex%wordsToType.length]; 
-    if(currentCharacterIndex >0){
-        typer.innerHTML = wordToType.substr(0, --currentCharacterIndex -1);
-        setTimeout(erase, typingSpeed);
-    }else{
+          setTimeout(erase, typingDelay);
+        }
 
-        currentWordIndex++; 
-        setTimeout(type, typingDelay);
-    }
+      }
+      function erase() {
+        var wordToType = wordsToType[currentWordIndex % wordsToType.length];
+        if (currentCharacterIndex > 0) {
+          typer.innerHTML = wordToType.substr(0, --currentCharacterIndex - 1);
+          setTimeout(erase, typingSpeed);
+        } else {
 
-}
+          currentWordIndex++;
+          setTimeout(type, typingDelay);
+        }
 
-window.onload = function(){
-    type(); 
-}
+      }
+
+      window.onload = function () {
+        type();
+      }
     </script>
 
     <script>
@@ -678,5 +632,6 @@ window.onload = function(){
     <script>
       AOS.init();
     </script>
-  </body>
+</body>
+
 </html>
