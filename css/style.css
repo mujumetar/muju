@@ -133,6 +133,9 @@ h1{
 
 }
 
+modal > a {
+    color: black;
+}
 .first > a {
     color: black;
 }
