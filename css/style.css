@@ -139,3 +139,17 @@ modal > a {
 .first > a {
     color: black;
 }
+
+.name  {
+    background-color: #2f8d46;
+    background-image: url(/img/coding-background.jpg);
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 120px;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      
+      -webkit-font-smoothing: antialiased;
+}
