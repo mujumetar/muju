@@ -1,5 +1,6 @@
 :root {
     --mono: #e08e88;
+    --duration : 2000;
 }
 
 * {
@@ -35,14 +36,7 @@ header {
     overflow-x: hidden;
 }
 
-.slider-main {
-    width: 4000px;
-    display: flex;
-    position: relative;
-    animation: slide 10s infinite alternate;
-    margin-left: -2000px;
-    -webkit-animation: slide 10s infinite alternate;
-}
+
 
 .slider p {
     padding: 20px;
@@ -71,15 +65,6 @@ footer>a {
     text-shadow: -1px 2px 12px rgba(25, 0, 252, 0.75);
 }
 
-@keyframes slide {
-    from {
-        margin-left: -1000px;
-    }
-
-    to {
-        margin-left: 0px;
-    }
-}
 
 .hero {
     height: 100%;
@@ -1374,6 +1359,123 @@ modal > a {
     transform: scale(0.95);
   }
   
+
+  .App {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .MarqueeContainer {
+    min-height: 100%;
+    padding: 40px;
+  }
+  
+  .marquee-RightSide {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #131414;
+  }
+  
+  .marquee-LeftSideMianTitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 145.4%;
+    color: #131414;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .marquee-LeftSideSubTitle {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 43px;
+    color: #131414;
+  }
+  
+  .MarqueeContainer {
+    --space: 10px;
+    display: grid;
+    align-content: center;
+    gap: var(--space);
+    width: 100%;
+    font-family: "Corben", system-ui, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .marquee {
+    --duration: 60s;
+    --gap: var(--space);
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+  }
+  
+  .marquee__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__group {
+      animation-play-state: paused;
+    }
+  }
+  
+  .marquee--borders {
+    padding-block: 20px;
+  }
+  
+  .marquee--reverse .marquee__group {
+    animation-direction: reverse;
+    animation-delay: calc(var(--duration) / -2);
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  
+  @media screen and (min-width: 311px) and (max-width: 767px) {
+    .MarqueeContainer {
+      padding: 10px;
+    }
+    .marquee__group img {
+      width: 180px;
+      height: 100px;
+    }
+    .marquee-LeftSideSubTitle {
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 43px;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 2560px) {
+    .marquee-LeftSideSubTitle {
+      text-align: start;
+    }
+    .marquee-LeftSideMianTitle {
+      display: flex;
+      justify-content: start;
+    }
+  }
   
   
   
