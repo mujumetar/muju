@@ -1,6 +1,7 @@
 :root {
     --mono: #e08e88;
     --duration : 2000;
+    --night:#0c0130;
 }
 
 * {
@@ -36,7 +37,9 @@ header {
     overflow-x: hidden;
 }
 
-
+.nav-item :hover {
+  border-bottom:2px solid red;
+}
 
 .slider p {
     padding: 20px;
