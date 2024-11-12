@@ -7,6 +7,7 @@
 * {
   margin: 0;
   padding: 0;
+  user-select: none;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   /* border: 1px solid red; */
@@ -1787,4 +1788,21 @@ modal > a {
 .Btn:active {
   transform: translate(5px,5px);
   transition-duration: .3s;
+}
+
+.star {
+  visibility:hidden;
+  font-size:30px;
+  cursor:pointer;
+}
+.star:before {
+  content: "\2606";
+  position: absolute;
+  visibility:visible;
+}
+.star:checked:before {
+  content: "\2605";
+ position: absolute;
+ color: yellow;
+ text-shadow: 1px 1px 5px black;
 }
