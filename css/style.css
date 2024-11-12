@@ -1774,7 +1774,7 @@ modal > a {
   border-radius: 50%;
   left: -100%;
   top: 0;
-  transition-duration: .3s;
+  transition-duration: .9s;
   mix-blend-mode: difference;
 }
 
