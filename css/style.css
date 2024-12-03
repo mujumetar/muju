@@ -2112,23 +2112,32 @@ modal > a {
   }
 }
 
+#main {
+  height: 100%;
+}
+
 .cursor {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%) scale(1.5);
   border-radius: 50%;
   mix-blend-mode: difference;
   transition: all 0.1s linear ease;
-  z-index: 999;
+  z-index: 5;
 }
+
 
 .point{
   background-color: black;
-  width: 5px;
-  height: 5px;
+  height: 2px;
+  width: 2px;
+  position: relative;
+  border-radius: 50%;
+  /* mix-blend-mode: difference; */
+
 }
