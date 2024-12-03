@@ -2111,3 +2111,24 @@ modal > a {
     padding: 0;
   }
 }
+
+.cursor {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: all 0.1s linear ease;
+  z-index: 999;
+}
+
+.point{
+  background-color: black;
+  width: 5px;
+  height: 5px;
+}

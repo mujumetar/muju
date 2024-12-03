@@ -27,7 +27,10 @@
 
 
 
-<body class="day">
+<body class="day" id="main">
+  <div class="cursor">
+    <div class="point position-relative top-50 start-50 translate-middle"></div>
+  </div>
   <div class="container-fluids position-fixed top-50 start-50 translate-middle bg-dark z-3">
 
     <div class="terminal-loader position-fixed top-50 start-50 translate-middle  my-5">
@@ -1252,6 +1255,18 @@
         $(".container-fluids").fadeOut(1500);
       })
 
+
+    </script>
+    <script>
+      var main = document.querySelector("#main")
+      var crsr = document.querySelector(".cursor")
+
+      main.addEventListener("mousemove",function(dets){
+        // console.log( dets.x + "px")
+        // console.log( dets.y + "px")
+        crsr.style.left = dets.x + "px"
+        crsr.style.top = dets.y + "px"
+      })
 
     </script>
 </body>
