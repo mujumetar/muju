@@ -29,7 +29,8 @@
 
 <body class="day" id="main">
   <div class="cursor">
-    <div class="point position-relative"></div>
+   
+      <i class="ri-add-large-line point position-relative"></i>
   </div>
   <div class="container-fluids position-fixed top-50 start-50 translate-middle bg-dark z-3">
 
@@ -155,7 +156,7 @@
     <div class="row">
 
       <div class="col-lg-4 col-12 muju-main2">
-        <div class="muju-main">
+        <div class="muju-main" id="mujju">
           <img src="/img/profile.jpg" alt="muzammil" class="img-fluid p-2 muju" />
         </div>
       </div>
@@ -1261,13 +1262,25 @@
       var crsr = document.querySelector(".cursor")
 
       main.addEventListener("mousemove",function(dets){
-        // console.log( dets.x + "px")
-        // console.log( dets.y + "px")
         crsr.style.left = dets.x + "px"
         crsr.style.top = dets.y + "px"
       })
 
+      main.addEventListener("click",function(){
+        crsr.style.backgroundColor = "black"
+        crsr.style.transform = "scale(0.5)"
+        crsr.style.border = "2px solid white"
+
+      })
+
+      
+
     </script>
+
+<script type="text/javascript">
+  document.getElementById('mujju').style.cursor = 'none';
+  document.querySelector(".cursor").style.cursor = 'none';
+</script>
 </body>
 
 </html>

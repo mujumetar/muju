@@ -2130,14 +2130,3 @@ modal > a {
   transition: all 0.1s linear ease;
   z-index: 5;
 }
-
-
-.point{
-  background-color: black;
-  height: 2px;
-  width: 2px;
-  position: relative;
-  border-radius: 50%;
-  /* mix-blend-mode: difference; */
-
-}
