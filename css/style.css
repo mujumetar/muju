@@ -12,12 +12,14 @@
   font-family: "Poppins", sans-serif;
   /* border: 1px solid red; */
   scroll-behavior: smooth;
+
 }
 
 body {
   transition: all 2s ease-in-out;
   position: relative;
   background-color: transparent;
+  cursor: none;
 }
 
 .mono {
@@ -224,9 +226,11 @@ modal > a {
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.2em solid green;
-  /*Cursor*/animation: typeAndDelete 4s steps(8) infinite,    blinkCursor 0.5s step-end infinite alternate;
+  /*Cursor*/
+  animation: typeAndDelete 4s steps(8) infinite,
+    blinkCursor 0.5s step-end infinite alternate;
   margin-top: 1.5em;
-  -webkit-animation: typeAndDelete 4s steps(8) infinite,;
+  -webkit-animation: typeAndDelete 4s steps(8) infinite;
 }
 
 .input-wrapper {
@@ -1739,7 +1743,7 @@ modal > a {
   height: 100%;
 }
 
-/* From Uiverse.io by vinodjangid07 */ 
+/* From Uiverse.io by vinodjangid07 */
 .Btn {
   width: 100%;
   height: 40px;
@@ -1755,7 +1759,7 @@ modal > a {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
   position: relative;
   overflow: hidden;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 
 .svgIcon {
@@ -1775,40 +1779,39 @@ modal > a {
   border-radius: 50%;
   left: -100%;
   top: 0;
-  transition-duration: .9s;
+  transition-duration: 0.9s;
   mix-blend-mode: difference;
 }
 
 .Btn:hover::before {
-  transition-duration: .3s;
-  transform: translate(100%,-50%);
+  transition-duration: 0.3s;
+  transform: translate(100%, -50%);
   border-radius: 0;
 }
 
 .Btn:active {
-  transform: translate(5px,5px);
-  transition-duration: .3s;
+  transform: translate(5px, 5px);
+  transition-duration: 0.3s;
 }
 
 .star {
-  visibility:hidden;
-  font-size:30px;
-  cursor:pointer;
+  visibility: hidden;
+  font-size: 30px;
+  cursor: pointer;
 }
 .star:before {
   content: "\2606";
   position: absolute;
-  visibility:visible;
+  visibility: visible;
 }
 .star:checked:before {
   content: "\2605";
- position: absolute;
- color: yellow;
- text-shadow: 1px 1px 5px black;
+  position: absolute;
+  color: yellow;
+  text-shadow: 1px 1px 5px black;
 }
 
 .post-card {
- 
   background: lightgrey;
   background-color: rgb(24 27 32);
   border: 1px solid rgb(84 90 106);
@@ -1824,7 +1827,7 @@ modal > a {
   width: 35px;
   border-radius: 50%;
   background-color: blueviolet;
-  background-image: linear-gradient(to top left, blueviolet,rgb(73, 31, 112));
+  background-image: linear-gradient(to top left, blueviolet, rgb(73, 31, 112));
 }
 
 .title {
@@ -1834,7 +1837,7 @@ modal > a {
   margin-top: 10px;
   color: #fff;
   text-decoration: none;
-  transition: all .35s ease-in;
+  transition: all 0.35s ease-in;
 }
 
 .title:hover {
@@ -1879,7 +1882,7 @@ modal > a {
   font-weight: 900;
   border-radius: 10px;
   background-color: transparent;
-  transition: all .15s ease;
+  transition: all 0.15s ease;
 }
 
 .comment-like span:hover {
@@ -1890,8 +1893,6 @@ modal > a {
   fill: rgb(255, 255, 255);
   margin-right: 2px;
 }
-
-
 
 .background {
   display: flex;
@@ -1911,7 +1912,7 @@ modal > a {
 }
 
 .screen:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0;
@@ -1919,7 +1920,7 @@ modal > a {
   right: 20px;
   bottom: 0;
   border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   z-index: -1;
 }
 
@@ -1992,7 +1993,7 @@ modal > a {
 }
 
 .app-title:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 0;
@@ -2031,7 +2032,7 @@ modal > a {
   font-size: 14px;
   text-transform: uppercase;
   outline: none;
-  transition: border-color .2s;
+  transition: border-color 0.2s;
 }
 
 .app-form-control::placeholder {
@@ -2061,7 +2062,7 @@ modal > a {
   align-items: center;
   margin-top: 20px;
   color: #ffa4bd;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
   font-weight: normal;
 }
@@ -2112,21 +2113,65 @@ modal > a {
   }
 }
 
-#main {
-  height: 100%;
+.cursor {
+  display: block;
+  width: 50px;
+  mix-blend-mode: difference;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  background: transparent;
+  pointer-events: none;
+  z-index: 111;
+  border: 2px solid white;
+  transition: all 0.2s ease-out;
+  animation: moveCursor1 0.5s infinite alternate;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
 }
 
-.cursor {
-  height: 40px;
-  width: 40px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  transform: translate(-50%,-50%) scale(1.5);
-  border-radius: 50%;
+.expand {
+  background: transparent;
+  animation: moveCursor2 0.5s forwards;
+  border: 1px solid white;
   mix-blend-mode: difference;
-  transition: all 0.1s linear ease;
-  z-index: 5;
+  -webkit-animation: moveCursor2 0.5s forwards;
+}
+
+@keyframes moveCursor1 {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+}
+}
+
+@keyframes moveCursor2 {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+}
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
