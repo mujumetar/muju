@@ -2137,10 +2137,10 @@ modal > a {
 
 .expand {
   background: transparent;
-  animation: moveCursor2 0.5s forwards;
+  animation: moveCursor2 0.3s forwards;
   border: 1px solid white;
   mix-blend-mode: difference;
-  -webkit-animation: moveCursor2 0.5s forwards;
+  -webkit-animation: moveCursor2 0.3s forwards;
 }
 
 @keyframes moveCursor1 {
