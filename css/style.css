@@ -2181,3 +2181,12 @@ modal > a {
   color: white;
   font-size: 10px;
 }
+
+.animated-background {
+  background-color: transparent;
+  /* margin: 100px; */
+}
+
+canvas {
+  color: red;
+}
