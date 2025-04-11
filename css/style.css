@@ -1,7 +1,12 @@
 :root {
   --mono: #e08e88;
   --duration: 2000;
-  --night: #0c0130;
+  --night: #131313;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
 }
 
 * {
@@ -19,8 +24,13 @@ body {
   position: relative;
   background-color: transparent;
   cursor: none;
-
 }
+
+.night {
+  background-color: var(--night);
+color: white;
+}
+
 
 .row {
   overflow-y: hidden;
@@ -177,7 +187,6 @@ modal>a {
   border: 0.1em solid #333;
   background-color: #1a1a1a;
   color: #0f0;
-  font-family: "Courier New", Courier, monospace;
   font-size: 1em;
   padding: 1.5em 1em;
   width: 20em;
@@ -197,6 +206,8 @@ modal>a {
   height: 1.5em;
   background-color: #333;
   border-top-left-radius: 4px;
+  font-family: monospace;
+
   border-top-right-radius: 4px;
   padding: 0 0.4em;
   box-sizing: border-box;
@@ -204,12 +215,16 @@ modal>a {
 
 .terminal-controls {
   float: right;
+  font-family: monospace;
+
 }
 
 .control {
   display: inline-block;
   width: 0.6em;
   height: 0.6em;
+  font-family: monospace;
+
   margin-left: 0.4em;
   border-radius: 50%;
   background-color: #777;
@@ -229,6 +244,8 @@ modal>a {
 
 .terminal-title {
   float: left;
+  font-family: monospace;
+
   font-weight: bolder;
   line-height: 1.5em;
   color: #eee;
@@ -238,6 +255,7 @@ modal>a {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
+  font-family: monospace;
   border-right: 0.2em solid green;
   /*Cursor*/
   animation: typeAndDelete 4s steps(8) infinite,

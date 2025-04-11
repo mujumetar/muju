@@ -33,6 +33,13 @@
   <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
 </head>
 
+<style>
+  .dark-mode {
+  background-color: black;
+  color: white;
+}
+</style>
+
 
 
 <body class="day">
@@ -96,7 +103,7 @@
             </li>
           </ul>
           <form class="d-flex" role="search">
-            <button class="btn btn-outline-success" type="submit">
+            <button class="btn btn-outline-success" onclick="darkmode()">
               Contact
             </button>
           </form>
@@ -725,6 +732,12 @@
 
   </div>
 
+  <script>
+    function darkmode() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+  </script>
 
   <script>
     $(".menu").click(function () {
