@@ -6,7 +6,8 @@
 
 .dark-mode {
   background-color: black;
-  color: white;
+  color: white !important;
+  
 }
 
 * {
@@ -22,8 +23,9 @@
 body {
   transition: all 2s ease-in-out;
   position: relative;
-  background-color: transparent;
-  cursor: none;
+  /* background-color: transparent; */
+  /* cursor: none; */
+  
 }
 
 .night {
