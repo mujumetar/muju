@@ -1,263 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <!-- <link rel="stylesheet" href="/css/media.css" /> -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
-      rel="stylesheet"
-    />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>portfolio</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <!-- <link rel="stylesheet" href="/css/media.css" /> -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet" />
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-  </head>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 
-  <style>
-    .dark-mode {
-      background-color: black;
-      color: white;
-    }
-  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+</head>
 
-  <body>
-    <div class="cursor d-flex justify-content-center align-items-center">
-      <i class="ri-circle-line"></i>
-    </div>
-    <div
-      class="container-fluids position-fixed top-50 start-50 translate-middle bg-dark z-3"
-    >
-      <div
-        class="terminal-loader position-fixed top-50 start-50 translate-middle my-5"
-      >
-        <div class="terminal-header">
-          <div class="terminal-">MUJU</div>
-          <div class="terminal-controls">
-            <div class="control close"></div>
-            <div class="control minimize"></div>
-            <div class="control maximize"></div>
-          </div>
+<style>
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+</style>
+
+<body>
+  <div class="cursor d-flex justify-content-center align-items-center">
+    <i class="ri-circle-line"></i>
+  </div>
+  <div class="container-fluids position-fixed top-50 start-50 translate-middle bg-dark z-3">
+    <div class="terminal-loader position-fixed top-50 start-50 translate-middle my-5">
+      <div class="terminal-header">
+        <div class="terminal-">MUJU</div>
+        <div class="terminal-controls">
+          <div class="control close"></div>
+          <div class="control minimize"></div>
+          <div class="control maximize"></div>
         </div>
-        <div class="text">Loading...</div>
       </div>
+      <div class="text">Loading...</div>
     </div>
+  </div>
 
-    <header class="mb-5">
-      <nav
-        class="navbar navbar-expand-lg bg-body-tertiary bg-white shadow py-4"
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand fw-bolder" href="#">Muju</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Projects
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      target="_blank"
-                      href="https://github.com/mujumetar?tab=repositories"
-                      >explore</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#skills">Skills</a>
-              </li>
+  <header class="mb-5">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white shadow py-4">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bolder" href="#">Muju</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Projects
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" target="_blank"
+                    href="https://github.com/mujumetar?tab=repositories">explore</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
 
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  target="_blank"
-                  href="https://github.com/mujumetar"
-                  >Git</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  target="_blank"
-                  href="mailto:mujuwork3@gmail.com"
-                  ><i class="ri-mail-line"></i
-                ></a>
-              </li>
-            </ul>
-           
-          </div>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="https://github.com/mujumetar">Git</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="mailto:mujuwork3@gmail.com"><i class="ri-mail-line"></i></a>
+            </li>
+          </ul>
+
         </div>
-      </nav>
-    </header>
-    <!-- <div id="animated-background container-fluid"
+      </div>
+    </nav>
+  </header>
+  <!-- <div id="animated-background container-fluid"
     class="animated-background animated-background--red position-absolute top-0 mb-5 w-100" data-color="transparent">
     <canvas id="can0" width="100%" height="400"></canvas>
   </div> -->
-    <div id="particles-js" class="position-absolute top-0 mb-5 w-100"></div>
-    <div class="count-particles w-100">
-      <span class="js-count-particles"></span>
-    </div>
+  <div id="particles-js" class="position-absolute top-0 mb-5 w-100"></div>
+  <div class="count-particles w-100">
+    <span class="js-count-particles"></span>
+  </div>
 
-    <div class="container my-5">'</div>
+  <div class="container my-5">'</div>
 
-    <div
-      class="container my-5 hero d-flex justify-content-center align-items-center"
-      data-aos="fade-up"
-      data-bs-duration="2000ms"
-    >
-      <div class="row">
-        <div class="col-lg-4 col-12 muju-main2">
-          <div class="muju-main" id="mujju">
-            <img
-              src="/img/profile.jpeg"
-              alt="muzammil"
-              class="img-fluid p-2 muju"
-            />
-          </div>
+  <div class="container my-5 hero d-flex justify-content-center align-items-center" data-aos="fade-up"
+    data-bs-duration="2000ms">
+    <div class="row">
+      <div class="col-lg-4 col-12 muju-main2">
+        <div class="muju-main" id="mujju">
+          <img src="/img/profile.jpeg" alt="muzammil" class="img-fluid p-2 muju" />
         </div>
+      </div>
 
-        <div
-          class="col-lg-1 col-12 d-flex align-items-center justify-content-center"
-        >
-          <div class="row text-center">
-            <div class="col-12">
-              <a
-                href="https://www.instagram.com/muju_metar/"
-                class="text-decoration-none text-dark soc-ic"
-                ><i class="ri-instagram-line"></i
-              ></a>
-            </div>
-            <div class="col-12">
-              <a
-                href="https://www.linkedin.com/in/muju3/"
-                class="text-decoration-none text-dark soc-ic"
-                ><i class="ri-linkedin-fill"></i
-              ></a>
-            </div>
-            <div class="col-12">
-              <a href="#" class="text-decoration-none text-dark"></a>
-            </div>
+      <div class="col-lg-1 col-12 d-flex align-items-center justify-content-center">
+        <div class="row text-center">
+          <div class="col-12">
+            <a href="https://www.instagram.com/muju_metar/" class="text-decoration-none text-dark soc-ic"><i
+                class="ri-instagram-line"></i></a>
           </div>
-        </div>
-
-        <div
-          class="col-lg-7 col-12 d-flex align-items-center justify-content-center"
-        >
-          <div class="row text-center">
-            <div class="col-lg-12">
-              <h1 class="display-1 fw-bolder name">MuZammil</h1>
-            </div>
-            <div class="col-lg-12">
-              <div class="container">
-                <div class="typing-container">
-                  <h1>
-                    I AM <br />
-                    &nbsp;<span
-                      class="span"
-                      typing-speed="70"
-                      typing-delay="800"
-                      words="Web Developer,Web Designer,Student"
-                    ></span>
-                  </h1>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <p class="mono text-center" style="color: var(--mono)">
-                Hii 👋 Nice To Meet You
-              </p>
-              <p class="mono text-center" style="color: var(--mono)">
-                I’m a passionate web developer skilled in HTML, CSS, JavaScript,
-                and responsive design, focused on creating user-friendly
-                websites.
-              </p>
-            </div>
-            <div class="col-lg-12">
-              <a href="tel:7874536227"
-                ><button class="btn btn-outline-success">
-                  <i class="ri-phone-line"></i> &nbsp; Hire me
-                </button></a
-              >
-              <a href="/img/MUZAMMIL-RESUME (7).pdf" target="_blank" download=""
-                ><button id="skills" class="btn btn-outline-success">
-                  <i class="ri-download-2-line"></i> &nbsp;Resume
-                </button></a
-              >
-            </div>
+          <div class="col-12">
+            <a href="https://www.linkedin.com/in/muju3/" class="text-decoration-none text-dark soc-ic"><i
+                class="ri-linkedin-fill"></i></a>
+          </div>
+          <div class="col-12">
+            <a href="#" class="text-decoration-none text-dark"></a>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="container" data-aos="fade-up" data-bs-duration="800">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="mono fs-1 fw-bolder">Skills</h2>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="App">
-          <div class="MarqueeContainer">
+      <div class="col-lg-7 col-12 d-flex align-items-center justify-content-center">
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <h1 class="display-1 fw-bolder name">MuZammil</h1>
+          </div>
+          <div class="col-lg-12">
             <div class="container">
-              <div class="row">
-                <div class="col-md-6 order-md-first">
-                  <div class="marquee-LeftSideSub">A Comprehensive Stack</div>
-                </div>
+              <div class="typing-container">
+                <h1>
+                  I AM <br />
+                  &nbsp;<span class="span" typing-speed="70" typing-delay="800"
+                    words="Web Developer,Web Designer,Student"></span>
+                </h1>
               </div>
             </div>
+          </div>
+          <div class="col-lg-12">
+            <p class="mono text-center" style="color: var(--mono)">
+              Hii 👋 Nice To Meet You
+            </p>
+            <p class="mono text-center" style="color: var(--mono)">
+              I’m a passionate web developer skilled in HTML, CSS, JavaScript,
+              and responsive design, focused on creating user-friendly
+              websites.
+            </p>
+          </div>
+          <div class="col-lg-12">
+            <a href="tel:7874536227"><button class="btn btn-outline-success">
+                <i class="ri-phone-line"></i> &nbsp; Hire me
+              </button></a>
+            <a href="/img/MUZAMMIL-RESUME (7).pdf" target="_blank" download=""><button id="skills"
+                class="btn btn-outline-success">
+                <i class="ri-download-2-line"></i> &nbsp;Resume
+              </button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-            <div class="marquee">
+  <div class="container" data-aos="fade-up" data-bs-duration="800">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="mono fs-1 fw-bolder">Skills</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="App">
+        <div class="MarqueeContainer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 order-md-first">
+                <div class="marquee-LeftSideSub">A Comprehensive Stack</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee">
+            <div class="marquee__group">
+              <img src="/img/c-logo.png" alt="C Image" />
+              <img src="/img/letter-c.png" alt="C Image" />
+              <img src="/img/bootstrap.png" alt="boot Image" />
+              <img src="/img/css-3.png" alt="CSS HTML Image" />
+              <img src="/img/js.png" alt="JavaScript Image" />
+            </div>
+          </div>
+
+          <div class="marquee marquee--borders" style="--duration: 100s">
+            <div class="marquee marquee--reverse">
               <div class="marquee__group">
                 <img src="/img/c-logo.png" alt="C Image" />
                 <img src="/img/letter-c.png" alt="C Image" />
@@ -265,329 +209,221 @@
                 <img src="/img/css-3.png" alt="CSS HTML Image" />
                 <img src="/img/js.png" alt="JavaScript Image" />
               </div>
-            </div>
 
-            <div class="marquee marquee--borders" style="--duration: 100s">
-              <div class="marquee marquee--reverse">
-                <div class="marquee__group">
-                  <img src="/img/c-logo.png" alt="C Image" />
-                  <img src="/img/letter-c.png" alt="C Image" />
-                  <img src="/img/bootstrap.png" alt="boot Image" />
-                  <img src="/img/css-3.png" alt="CSS HTML Image" />
-                  <img src="/img/js.png" alt="JavaScript Image" />
-                </div>
-
-                <div aria-hidden="true" class="marquee__group">
-                  <img src="/img/c-logo.png" alt="C Image" />
-                  <img src="/img/letter-c.png" alt="C Image" />
-                  <img src="/img/bootstrap.png" alt="boot Image" />
-                  <img src="/img/css-3.png" alt="CSS HTML Image" />
-                  <img src="/img/js.png" alt="JavaScript Image" />
-                </div>
+              <div aria-hidden="true" class="marquee__group">
+                <img src="/img/c-logo.png" alt="C Image" />
+                <img src="/img/letter-c.png" alt="C Image" />
+                <img src="/img/bootstrap.png" alt="boot Image" />
+                <img src="/img/css-3.png" alt="CSS HTML Image" />
+                <img src="/img/js.png" alt="JavaScript Image" />
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container my-5" data-aos="fade-up" data-bs-duration="2000ms">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="mono fs-1 fw-bolder">Projects</h2>
-        </div>
+  <div class="container my-5" data-aos="fade-up" data-bs-duration="2000ms">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="mono fs-1 fw-bolder">Projects</h2>
       </div>
     </div>
+  </div>
 
-    <div
-      class="container d-flex justify-content-center align-items-center"
-      data-aos="fade-up"
-      data-bs-duration="2500ms"
-    >
-      <div class="row gy-3">
-        <div class="col-lg-4 col-md-6 col-sm-12 projects">
-          <div class="post-card" data-aos="fade-up" data-bs-duration="2700ms">
-            <div class="container-fluid d-flex text-center">
-              <div class="avatar"></div>
-              <div class="username ms-2 mt-1 fw-bolder">@muju_metar</div>
-            </div>
-
-            <a
-              href="https://github.com/mujumetar/ecom-auth"
-              target="_blank"
-              class="title"
-              >e-commerce</a
-            >
-            <span class="datetime">Recently</span>
-            <div class="image-preview">
-              <img
-                src="/img/ecommerce.png"
-                alt=""
-                data-bs-target="#exampleModalToggle"
-                data-bs-toggle="modal"
-                class="img-fluid rounded-4"
-              />
-            </div>
-            <div class="comment-like d-flex justify-between">
-              <div class="git-btn">
-                <button class="btn btn-outline-primary">
-                  <a
-                    href="https://github.com/mujumetar/ecom-auth"
-                    target="_blank"
-                    class="text-decoration-none text-white"
-                  >
-                    <i class="ri-github-line"></i> Github
-                  </a>
-                </button>
-              </div>
-              <div class="live-btn">
-                <button class="btn btn-outline-warning">
-                  <a
-                    href="https://ecom-auth-kappa.vercel.app/"
-                    target="_blank"
-                    class="text-decoration-none text-white"
-                  >
-                    <i class="ri-eye-line"></i> Live
-                  </a>
-                </button>
-              </div>
-            </div>
+  <div class="container d-flex justify-content-center align-items-center" data-aos="fade-up" data-bs-duration="2500ms">
+    <div class="row gy-3">
+      <div class="col-lg-4 col-md-6 col-sm-12 projects">
+        <div class="post-card" data-aos="fade-up" data-bs-duration="2700ms">
+          <div class="container-fluid d-flex text-center">
+            <div class="avatar"></div>
+            <div class="username ms-2 mt-1 fw-bolder">@muju_metar</div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 projects">
-          <div class="post-card" data-aos="fade-up" data-bs-duration="2700ms">
-            <div class="container-fluid d-flex text-center">
-              <div class="avatar"></div>
-              <div class="username ms-2 mt-1 fw-bolder">@muju_metar</div>
-            </div>
 
-            <a
-              href="https://github.com/mujumetar/movies"
-              target="_blank"
-              class="title"
-              >Movies</a
-            >
-            <span class="datetime">Recently</span>
-            <div class="image-preview">
-              <img
-                src="/img/movieshub.png"
-                alt=""
-                data-bs-target="#exampleModalToggle"
-                data-bs-toggle="modal"
-                class="img-fluid rounded-4"
-              />
-            </div>
-            <div class="comment-like d-flex justify-between">
-              <div class="git-btn">
-                <button class="btn btn-outline-primary">
-                  <a
-                    href="https://github.com/mujumetar/movies"
-                    target="_blank"
-                    class="text-decoration-none text-white"
-                  >
-                    <i class="ri-github-line"></i> Github
-                  </a>
-                </button>
-              </div>
-              <div class="live-btn">
-                <button class="btn btn-outline-warning">
-                  <a
-                    href="https://movies-mujju.vercel.app/"
-                    target="_blank"
-                    class="text-decoration-none text-white"
-                  >
-                    <i class="ri-eye-line"></i> Live
-                  </a>
-                </button>
-              </div>
-            </div>
+          <a href="https://github.com/mujumetar/ecom-auth" target="_blank" class="title">e-commerce</a>
+          <span class="datetime">Recently</span>
+          <div class="image-preview">
+            <img src="/img/ecommerce.png" alt="" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+              class="img-fluid rounded-4" />
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 projects">
-          <div class="post-card" data-aos="fade-up" data-bs-duration="2700ms">
-            <div class="container-fluid d-flex text-center">
-              <div class="avatar"></div>
-              <div class="username ms-2 mt-1 fw-bolder">@muju_metar</div>
+          <div class="comment-like d-flex justify-between">
+            <div class="git-btn">
+              <button class="btn btn-outline-primary">
+                <a href="https://github.com/mujumetar/ecom-auth" target="_blank"
+                  class="text-decoration-none text-white">
+                  <i class="ri-github-line"></i> Github
+                </a>
+              </button>
             </div>
-
-            <a
-              href="https://github.com/mujumetar/react-todo"
-              target="_blank"
-              class="title"
-              >Notekeeper</a
-            >
-            <span class="datetime">Recently</span>
-            <div class="image-preview">
-              <img
-                src="/img/notekeeper.png"
-                alt=""
-                data-bs-target="#exampleModalToggle"
-                data-bs-toggle="modal"
-                class="img-fluid rounded-4"
-              />
-            </div>
-            <div class="comment-like d-flex justify-between">
-              <div class="git-btn">
-                <button class="btn btn-outline-primary">
-                  <a
-                    href="https://github.com/mujumetar/react-todo"
-                    target="_blank"
-                    class="text-decoration-none text-white"
-                  >
-                    <i class="ri-github-line"></i> Github
-                  </a>
-                </button>
-              </div>
-              <div class="live-btn">
-                <button class="btn btn-outline-warning">
-                  <a
-                    href="https://react-todo-nine-tau.vercel.app/"
-                    target="_blank"
-                    class="text-decoration-none text-white"
-                  >
-                    <i class="ri-eye-line"></i> Live
-                  </a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-12 projects">
-          <div class="post-card" data-aos="fade-up" data-bs-duration="2700ms">
-            <div class="container-fluid d-flex text-center">
-              <div class="avatar"></div>
-              <div class="username ms-2 mt-1 fw-bolder">@muju_metar</div>
-            </div>
-
-            <a href="https://github.com/mujumetar/fruitables" class="title" target="_blank">Fruitables</a>
-            <span class="datetime">Recently</span>
-            <div class="image-preview">
-              <img
-                src="/img/fruitables.png"
-                alt=""
-                data-bs-target="#exampleModalToggle"
-                data-bs-toggle="modal"
-                class="img-fluid rounded-4"
-              />
-            </div>
-            <div class="comment-like d-flex justify-between">
-              <div class="git-btn">
-                <button class="btn btn-outline-primary">
-                  <a
-                    href="https://github.com/mujumetar/fruitables"
-                    target="_blank"
-                    class="text-decoration-none text-white"
-                  >
-                    <i class="ri-github-line"></i> Github
-                  </a>
-                </button>
-              </div>
-              <div class="live-btn">
-                <button class="btn btn-outline-warning">
-                  <a
-                    href="https://fruitables-phi.vercel.app/"
-                    target="_blank"
-                    class="text-decoration-none text-white"
-                  >
-                    <i class="ri-eye-line"></i> Live
-                  </a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 projects">
-          <div class="post-card" data-aos="fade-up" data-bs-duration="2700ms">
-            <div class="container-fluid d-flex text-center">
-              <div class="avatar"></div>
-              <div class="username ms-2 mt-1 fw-bolder">@muju_metar</div>
-            </div>
-
-            <a
-              href="https://github.com/mujumetar/courses-project"
-              target="_blank"
-              class="title"
-              >Courses</a
-            >
-            <span class="datetime">Recently</span>
-            <div class="image-preview">
-              <img
-                src="/img/courses.png"
-                alt=""
-                data-bs-target="#exampleModalToggle4"
-                data-bs-toggle="modal"
-                class="img-fluid rounded-4"
-              />
-            </div>
-       <div class="comment-like d-flex justify-between">
-              <div class="git-btn">
-                <button class="btn btn-outline-primary">
-                  <a
-                    href="https://github.com/mujumetar/courses-project"
-                    target="_blank"
-                    class="text-decoration-none text-white"
-                  >
-                    <i class="ri-github-line"></i> Github
-                  </a>
-                </button>
-              </div>
-              <div class="live-btn">
-                <button class="btn btn-outline-warning">
-                  <a
-                    href="https://courses-sage-iota.vercel.app/"
-                    target="_blank"
-                    class="text-decoration-none text-white"
-                  >
-                    <i class="ri-eye-line"></i> Live
-                  </a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 projects">
-          <div class="post-card" data-aos="fade-up" data-bs-duration="2700ms">
-            <div class="container-fluid d-flex text-center">
-              <div class="avatar"></div>
-              <div class="username ms-2 mt-1 fw-bolder">@muju_metar</div>
-            </div>
-
-            <a
-              href="https://github.com/mujumetar?tab=repositories"
-              target="_blank"
-              class="title"
-              >visit github</a
-            >
-            <span class="datetime">Recently</span>
-            <div class="image-preview">
-              <img
-                src="/img/gadget-zone.png"
-                alt=""
-                data-bs-target="#exampleModalToggle"
-                data-bs-toggle="modal"
-                class="img-fluid rounded-4"
-              />
-            </div>
-    <div class="comment-like d-flex justify-between">
-              <div class="git-btn">
-                <button class="btn btn-outline-primary">
-                  <a
-                    href="https://github.com/mujumetar"
-                    target="_blank"
-                    class="text-decoration-none text-white"
-                  >
-                    <i class="ri-github-line"></i>Visit Github For More
-                  </a>
-                </button>
-              </div>
-             
+            <div class="live-btn">
+              <button class="btn btn-outline-warning">
+                <a href="https://ecom-auth-kappa.vercel.app/" target="_blank" class="text-decoration-none text-white">
+                  <i class="ri-eye-line"></i> Live
+                </a>
+              </button>
             </div>
           </div>
         </div>
       </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 projects">
+        <div class="post-card" data-aos="fade-up" data-bs-duration="2700ms">
+          <div class="container-fluid d-flex text-center">
+            <div class="avatar"></div>
+            <div class="username ms-2 mt-1 fw-bolder">@muju_metar</div>
+          </div>
+
+          <a href="https://github.com/mujumetar/movies" target="_blank" class="title">Movies</a>
+          <span class="datetime">Recently</span>
+          <div class="image-preview">
+            <img src="/img/movieshub.png" alt="" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+              class="img-fluid rounded-4" />
+          </div>
+          <div class="comment-like d-flex justify-between">
+            <div class="git-btn">
+              <button class="btn btn-outline-primary">
+                <a href="https://github.com/mujumetar/movies" target="_blank" class="text-decoration-none text-white">
+                  <i class="ri-github-line"></i> Github
+                </a>
+              </button>
+            </div>
+            <div class="live-btn">
+              <button class="btn btn-outline-warning">
+                <a href="https://movies-mujju.vercel.app/" target="_blank" class="text-decoration-none text-white">
+                  <i class="ri-eye-line"></i> Live
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 projects">
+        <div class="post-card" data-aos="fade-up" data-bs-duration="2700ms">
+          <div class="container-fluid d-flex text-center">
+            <div class="avatar"></div>
+            <div class="username ms-2 mt-1 fw-bolder">@muju_metar</div>
+          </div>
+
+          <a href="https://github.com/mujumetar/react-todo" target="_blank" class="title">Notekeeper</a>
+          <span class="datetime">Recently</span>
+          <div class="image-preview">
+            <img src="/img/notekeeper.png" alt="" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+              class="img-fluid rounded-4" />
+          </div>
+          <div class="comment-like d-flex justify-between">
+            <div class="git-btn">
+              <button class="btn btn-outline-primary">
+                <a href="https://github.com/mujumetar/react-todo" target="_blank"
+                  class="text-decoration-none text-white">
+                  <i class="ri-github-line"></i> Github
+                </a>
+              </button>
+            </div>
+            <div class="live-btn">
+              <button class="btn btn-outline-warning">
+                <a href="https://react-todo-nine-tau.vercel.app/" target="_blank"
+                  class="text-decoration-none text-white">
+                  <i class="ri-eye-line"></i> Live
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 projects">
+        <div class="post-card" data-aos="fade-up" data-bs-duration="2700ms">
+          <div class="container-fluid d-flex text-center">
+            <div class="avatar"></div>
+            <div class="username ms-2 mt-1 fw-bolder">@muju_metar</div>
+          </div>
+
+          <a href="https://github.com/mujumetar/fruitables" class="title" target="_blank">Fruitables</a>
+          <span class="datetime">Recently</span>
+          <div class="image-preview">
+            <img src="/img/fruitables.png" alt="" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+              class="img-fluid rounded-4" />
+          </div>
+          <div class="comment-like d-flex justify-between">
+            <div class="git-btn">
+              <button class="btn btn-outline-primary">
+                <a href="https://github.com/mujumetar/fruitables" target="_blank"
+                  class="text-decoration-none text-white">
+                  <i class="ri-github-line"></i> Github
+                </a>
+              </button>
+            </div>
+            <div class="live-btn">
+              <button class="btn btn-outline-warning">
+                <a href="https://fruitables-phi.vercel.app/" target="_blank" class="text-decoration-none text-white">
+                  <i class="ri-eye-line"></i> Live
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 projects">
+        <div class="post-card" data-aos="fade-up" data-bs-duration="2700ms">
+          <div class="container-fluid d-flex text-center">
+            <div class="avatar"></div>
+            <div class="username ms-2 mt-1 fw-bolder">@muju_metar</div>
+          </div>
+
+          <a href="https://github.com/mujumetar/book-store" target="_blank" class="title">Book Store</a>
+          <span class="datetime">Recently</span>
+          <div class="image-preview">
+            <img src="/img/book-website.png" alt="" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal"
+              class="img-fluid rounded-4" />
+          </div>
+          <div class="comment-like d-flex justify-between">
+            <div class="git-btn">
+              <button class="btn btn-outline-primary">
+                <a href="https://github.com/mujumetar/book-store" target="_blank"
+                  class="text-decoration-none text-white">
+                  <i class="ri-github-line"></i> Github
+                </a>
+              </button>
+            </div>
+            <div class="live-btn">
+              <button class="btn btn-outline-warning">
+                <a href="https://book-store-iota-coral.vercel.app/" target="_blank" class="text-decoration-none text-white">
+                  <i class="ri-eye-line"></i> Live
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 projects">
+        <div class="post-card" data-aos="fade-up" data-bs-duration="2700ms">
+          <div class="container-fluid d-flex text-center">
+            <div class="avatar"></div>
+            <div class="username ms-2 mt-1 fw-bolder">@muju_metar</div>
+          </div>
+
+          <a href="https://github.com/mujumetar?tab=repositories" target="_blank" class="title">visit github</a>
+          <span class="datetime">Recently</span>
+          <div class="image-preview">
+            <img src="/img/gadget-zone.png" alt="" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+              class="img-fluid rounded-4" />
+          </div>
+          <div class="comment-like d-flex justify-between">
+            <div class="git-btn">
+              <button class="btn btn-outline-primary">
+                <a href="https://github.com/mujumetar" target="_blank" class="text-decoration-none text-white">
+                  <i class="ri-github-line"></i>Visit Github For More
+                </a>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-<!-- 
+  </div>
+  <!-- 
     <div class="container">
       <div class="row text-center">
         <div class="col-lg-2 col-md-6 col-sm-12"></div>
@@ -638,353 +474,220 @@
       </div>
     </div> -->
 
-    <div class="container my-5" data-aos="fade-up" id="contactus" data-bs-duration="2000ms">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="mono fs-1 fw-bolder">Contact Us</h2>
-        </div>
+  <div class="container my-5" data-aos="fade-up" id="contactus" data-bs-duration="2000ms">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="mono fs-1 fw-bolder">Contact Us</h2>
       </div>
     </div>
+  </div>
 
-    <div class="container my-5" data-aos="fade-up" data-bs-duration="2000ms">
-      <div class="row gy-3">
-        <div class="col-lg-6 col-md-12">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59286.75796773073!2d72.11370650678357!3d21.763908263528943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f5081abb84e2f%3A0xf676d64c6e13716c!2sBhavnagar%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1718966863326!5m2!1sen!2sin"
-            width="100%"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            class="shadow rounded-3"
-            data-aos="fade-right"
-            data-bs-duration="3000"
-          ></iframe>
-        </div>
-        <div
-          class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center flex-column"
-          data-aos="fade-right"
-          data-bs-duration="3000"
-        >
-          <form
-            action="https://api.web3forms.com/submit"
-            method="POST"
-            class="rounded-3 d-flex justify-content-center align-items-center flex-column w-100 h-100 p-3 shadow"
-          >
-            <p class="h2 mono">Form</p>
+  <div class="container my-5" data-aos="fade-up" data-bs-duration="2000ms">
+    <div class="row gy-3">
+      <div class="col-lg-6 col-md-12">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59286.75796773073!2d72.11370650678357!3d21.763908263528943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f5081abb84e2f%3A0xf676d64c6e13716c!2sBhavnagar%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1718966863326!5m2!1sen!2sin"
+          width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" class="shadow rounded-3" data-aos="fade-right"
+          data-bs-duration="3000"></iframe>
+      </div>
+      <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center flex-column" data-aos="fade-right"
+        data-bs-duration="3000">
+        <form action="https://api.web3forms.com/submit" method="POST"
+          class="rounded-3 d-flex justify-content-center align-items-center flex-column w-100 h-100 p-3 shadow">
+          <p class="h2 mono">Form</p>
 
-            <!-- Replace with your Access Key -->
-            <input
-              type="hidden"
-              name="Subject"
-              value="${first_name} sent you a message from portfolio..."
-            />
-            <input
-              type="hidden"
-              name="access_key"
-              value="aa9417ca-c7b3-4ba6-811d-6e001f8d7718"
-            />
+          <!-- Replace with your Access Key -->
+          <input type="hidden" name="Subject" value="${first_name} sent you a message from portfolio..." />
+          <input type="hidden" name="access_key" value="aa9417ca-c7b3-4ba6-811d-6e001f8d7718" />
 
-            <input
-              type="text"
-              name="name"
-              required
-              class="w-100 form-control-sm px-2 my-3 border-1 form-control"
-              placeholder="Enter Your Name"
-            />
-            <input
-              type="tel"
-              name="Phone Number"
-              required
-              class="w-100 form-control-sm px-2 my-3 border-1 form-control"
-              placeholder="Enter Your Number"
-            />
-            <input
-              type="email"
-              name="email"
-              required
-              class="w-100 form-control-sm px-2 my-3 border-1 form-control"
-              placeholder="Enter Your Email"
-            />
-            <textarea
-              name="message"
-              required
-              class="w-100 form-control-sm px-2 my-3 border-1 form-control"
-              placeholder="Message"
-              style="height: 150px"
-            ></textarea>
+          <input type="text" name="name" required class="w-100 form-control-sm px-2 my-3 border-1 form-control"
+            placeholder="Enter Your Name" />
+          <input type="tel" name="Phone Number" required class="w-100 form-control-sm px-2 my-3 border-1 form-control"
+            placeholder="Enter Your Number" />
+          <input type="email" name="email" required class="w-100 form-control-sm px-2 my-3 border-1 form-control"
+            placeholder="Enter Your Email" />
+          <textarea name="message" required class="w-100 form-control-sm px-2 my-3 border-1 form-control"
+            placeholder="Message" style="height: 150px"></textarea>
 
-            <!-- Honeypot Spam Protection -->
-            <input
-              type="checkbox"
-              name="botcheck"
-              class="hidden"
-              style="display: none"
-            />
+          <!-- Honeypot Spam Protection -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none" />
 
-            <!-- Custom Confirmation / Success Page -->
-            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+          <!-- Custom Confirmation / Success Page -->
+          <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
 
-            <button type="submit" class="btn btn-sm btn-outline-success">
-              Submit Form
-            </button>
-          </form>
-        </div>
+          <button type="submit" class="btn btn-sm btn-outline-success">
+            Submit Form
+          </button>
+        </form>
       </div>
     </div>
+  </div>
 
-    <div class="pt-3" data-aos="fade-up" data-bs-duration="2000ms">
-      <div class="container">
-        <div class="row d-flex align-items-center mb-3 mt-5">
-          <div class="col-lg-4 col-md-12">
-            <h1 class="pr-clr fw-bolder fs-1 my-0 py-0">Muju</h1>
-            <p class="pr-clr">Web Developer</p>
-          </div>
-          <div class="col-lg-4 col-md-12 py-3">
-            <div class="input-wrapper">
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <g data-name="Layer 2">
-                  <g data-name="inbox">
-                    <rect
-                      width="24"
-                      height="24"
-                      transform="rotate(180 12 12)"
-                      opacity="0"
-                    ></rect>
-                    <path
-                      d="M20.79 11.34l-3.34-6.68A3 3 0 0 0 14.76 3H9.24a3 3 0 0 0-2.69 1.66l-3.34 6.68a2 2 0 0 0-.21.9V18a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-5.76a2 2 0 0 0-.21-.9zM8.34 5.55a1 1 0 0 1 .9-.55h5.52a1 1 0 0 1 .9.55L18.38 11H16a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1H5.62z"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-              <input
-                type="text"
-                name="text"
-                class="input"
-                placeholder="info@gmail.com"
-              />
-              <button class="Subscribe-btn">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="10"
-                  viewBox="0 0 38 15"
-                  class="arrow"
-                >
+  <div class="pt-3" data-aos="fade-up" data-bs-duration="2000ms">
+    <div class="container">
+      <div class="row d-flex align-items-center mb-3 mt-5">
+        <div class="col-lg-4 col-md-12">
+          <h1 class="pr-clr fw-bolder fs-1 my-0 py-0">Muju</h1>
+          <p class="pr-clr">Web Developer</p>
+        </div>
+        <div class="col-lg-4 col-md-12 py-3">
+          <div class="input-wrapper">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g data-name="Layer 2">
+                <g data-name="inbox">
+                  <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"></rect>
                   <path
-                    d="M10 7.519l-.939-.344h0l.939.344zm14.386-1.205l-.981-.192.981.192zm1.276 5.509l.537.843.148-.094.107-.139-.792-.611zm4.819-4.304l-.385-.923h0l.385.923zm7.227.707a1 1 0 0 0 0-1.414L31.343.448a1 1 0 0 0-1.414 0 1 1 0 0 0 0 1.414l5.657 5.657-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364zM1 7.519l.554.833.029-.019.094-.061.361-.23 1.277-.77c1.054-.609 2.397-1.32 3.629-1.787.617-.234 1.17-.392 1.623-.455.477-.066.707-.008.788.034.025.013.031.021.039.034a.56.56 0 0 1 .058.235c.029.327-.047.906-.39 1.842l1.878.689c.383-1.044.571-1.949.505-2.705-.072-.815-.45-1.493-1.16-1.865-.627-.329-1.358-.332-1.993-.244-.659.092-1.367.305-2.056.566-1.381.523-2.833 1.297-3.921 1.925l-1.341.808-.385.245-.104.068-.028.018c-.011.007-.011.007.543.84zm8.061-.344c-.198.54-.328 1.038-.36 1.484-.032.441.024.94.325 1.364.319.45.786.64 1.21.697.403.054.824-.001 1.21-.09.775-.179 1.694-.566 2.633-1.014l3.023-1.554c2.115-1.122 4.107-2.168 5.476-2.524.329-.086.573-.117.742-.115s.195.038.161.014c-.15-.105.085-.139-.076.685l1.963.384c.192-.98.152-2.083-.74-2.707-.405-.283-.868-.37-1.28-.376s-.849.069-1.274.179c-1.65.43-3.888 1.621-5.909 2.693l-2.948 1.517c-.92.439-1.673.743-2.221.87-.276.064-.429.065-.492.057-.043-.006.066.003.155.127.07.099.024.131.038-.063.014-.187.078-.49.243-.94l-1.878-.689zm14.343-1.053c-.361 1.844-.474 3.185-.413 4.161.059.95.294 1.72.811 2.215.567.544 1.242.546 1.664.459a2.34 2.34 0 0 0 .502-.167l.15-.076.049-.028.018-.011c.013-.008.013-.008-.524-.852l-.536-.844.019-.012c-.038.018-.064.027-.084.032-.037.008.053-.013.125.056.021.02-.151-.135-.198-.895-.046-.734.034-1.887.38-3.652l-1.963-.384zm2.257 5.701l.791.611.024-.031.08-.101.311-.377 1.093-1.213c.922-.954 2.005-1.894 2.904-2.27l-.771-1.846c-1.31.547-2.637 1.758-3.572 2.725l-1.184 1.314-.341.414-.093.117-.025.032c-.01.013-.01.013.781.624zm5.204-3.381c.989-.413 1.791-.42 2.697-.307.871.108 2.083.385 3.437.385v-2c-1.197 0-2.041-.226-3.19-.369-1.114-.139-2.297-.146-3.715.447l.771 1.846z"
-                  ></path></svg
-                >Subscribe
+                    d="M20.79 11.34l-3.34-6.68A3 3 0 0 0 14.76 3H9.24a3 3 0 0 0-2.69 1.66l-3.34 6.68a2 2 0 0 0-.21.9V18a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-5.76a2 2 0 0 0-.21-.9zM8.34 5.55a1 1 0 0 1 .9-.55h5.52a1 1 0 0 1 .9.55L18.38 11H16a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1H5.62z">
+                  </path>
+                </g>
+              </g>
+            </svg>
+            <input type="text" name="text" class="input" placeholder="info@gmail.com" />
+            <button class="Subscribe-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 38 15" class="arrow">
+                <path
+                  d="M10 7.519l-.939-.344h0l.939.344zm14.386-1.205l-.981-.192.981.192zm1.276 5.509l.537.843.148-.094.107-.139-.792-.611zm4.819-4.304l-.385-.923h0l.385.923zm7.227.707a1 1 0 0 0 0-1.414L31.343.448a1 1 0 0 0-1.414 0 1 1 0 0 0 0 1.414l5.657 5.657-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364zM1 7.519l.554.833.029-.019.094-.061.361-.23 1.277-.77c1.054-.609 2.397-1.32 3.629-1.787.617-.234 1.17-.392 1.623-.455.477-.066.707-.008.788.034.025.013.031.021.039.034a.56.56 0 0 1 .058.235c.029.327-.047.906-.39 1.842l1.878.689c.383-1.044.571-1.949.505-2.705-.072-.815-.45-1.493-1.16-1.865-.627-.329-1.358-.332-1.993-.244-.659.092-1.367.305-2.056.566-1.381.523-2.833 1.297-3.921 1.925l-1.341.808-.385.245-.104.068-.028.018c-.011.007-.011.007.543.84zm8.061-.344c-.198.54-.328 1.038-.36 1.484-.032.441.024.94.325 1.364.319.45.786.64 1.21.697.403.054.824-.001 1.21-.09.775-.179 1.694-.566 2.633-1.014l3.023-1.554c2.115-1.122 4.107-2.168 5.476-2.524.329-.086.573-.117.742-.115s.195.038.161.014c-.15-.105.085-.139-.076.685l1.963.384c.192-.98.152-2.083-.74-2.707-.405-.283-.868-.37-1.28-.376s-.849.069-1.274.179c-1.65.43-3.888 1.621-5.909 2.693l-2.948 1.517c-.92.439-1.673.743-2.221.87-.276.064-.429.065-.492.057-.043-.006.066.003.155.127.07.099.024.131.038-.063.014-.187.078-.49.243-.94l-1.878-.689zm14.343-1.053c-.361 1.844-.474 3.185-.413 4.161.059.95.294 1.72.811 2.215.567.544 1.242.546 1.664.459a2.34 2.34 0 0 0 .502-.167l.15-.076.049-.028.018-.011c.013-.008.013-.008-.524-.852l-.536-.844.019-.012c-.038.018-.064.027-.084.032-.037.008.053-.013.125.056.021.02-.151-.135-.198-.895-.046-.734.034-1.887.38-3.652l-1.963-.384zm2.257 5.701l.791.611.024-.031.08-.101.311-.377 1.093-1.213c.922-.954 2.005-1.894 2.904-2.27l-.771-1.846c-1.31.547-2.637 1.758-3.572 2.725l-1.184 1.314-.341.414-.093.117-.025.032c-.01.013-.01.013.781.624zm5.204-3.381c.989-.413 1.791-.42 2.697-.307.871.108 2.083.385 3.437.385v-2c-1.197 0-2.041-.226-3.19-.369-1.114-.139-2.297-.146-3.715.447l.771 1.846z">
+                </path>
+              </svg>Subscribe
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 text-end d-flex justify-content-end align-items-center">
+          <p>
+            <i class="ri-twitter-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"></i>
+          </p>
+          <p>
+            <i class="ri-facebook-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"></i>
+          </p>
+          <p>
+            <i class="ri-youtube-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"></i>
+          </p>
+          <p>
+            <i class="ri-linkedin-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"></i>
+          </p>
+        </div>
+      </div>
+
+      <hr class="border-warnings border-1 opacity-100" />
+      <div class="container">
+        <div class="row gy-3">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="first lh-lg text-dark my-4" data-aos="fade-up" data-bs-duration="1000">
+              <h4 class="fw-bold pb-1">Why People Like us!</h4>
+              <p class="anchor-text mb-4">
+                typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the like Aldus PageMaker
+                including of Lorem Ipsum.
+              </p>
+              <button class="btn btn-outline-warning rounded-5 py-2 px-3">
+                Read More
               </button>
             </div>
           </div>
-          <div
-            class="col-lg-4 col-md-12 text-end d-flex justify-content-end align-items-center"
-          >
-            <p>
-              <i
-                class="ri-twitter-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"
-              ></i>
-            </p>
-            <p>
-              <i
-                class="ri-facebook-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"
-              ></i>
-            </p>
-            <p>
-              <i
-                class="ri-youtube-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"
-              ></i>
-            </p>
-            <p>
-              <i
-                class="ri-linkedin-fill pr-clr fs-4 p-2 mx-2 border-warnings rounded-circle soc-icons"
-              ></i>
-            </p>
-          </div>
-        </div>
-
-        <hr class="border-warnings border-1 opacity-100" />
-        <div class="container">
-          <div class="row gy-3">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div
-                class="first lh-lg text-dark my-4"
-                data-aos="fade-up"
-                data-bs-duration="1000"
-              >
-                <h4 class="fw-bold pb-1">Why People Like us!</h4>
-                <p class="anchor-text mb-4">
-                  typesetting, remaining essentially unchanged. It was
-                  popularised in the 1960s with the like Aldus PageMaker
-                  including of Lorem Ipsum.
-                </p>
-                <button class="btn btn-outline-warning rounded-5 py-2 px-3">
-                  Read More
-                </button>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div
-                class="first lh-lg text-dark d-flex flex-column g-2"
-                data-aos="fade-up"
-                data-bs-duration="1000"
-              >
-                <h4 class="fw-bold pb-1">Info</h4>
-                <a
-                  href="#"
-                  class="anchor-hover text-decoration-none anchor-text"
-                  >About Us</a
-                >
-                <a
-                  href="#"
-                  class="anchor-hover text-decoration-none anchor-text"
-                  >Contact Us</a
-                >
-                <a
-                  href="#"
-                  class="anchor-hover text-decoration-none anchor-text"
-                  >Privacy Policy</a
-                >
-                <a
-                  href="#"
-                  class="anchor-hover text-decoration-none anchor-text"
-                  >Terms & Conditions</a
-                >
-                <a
-                  href="/testi.html"
-                  class="anchor-hover text-decoration-none anchor-text"
-                  >Add Your Testimonial</a
-                >
-                <a
-                  href="#"
-                  class="anchor-hover text-decoration-none anchor-text"
-                  >FAQs & Help</a
-                >
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div
-                class="first lh-lg text-dark d-flex flex-column g-lg-2"
-                data-aos="fade-up"
-                data-bs-duration="1000"
-              >
-                <h4 class="fw-bold pb-1">Services</h4>
-                <a
-                  href="https://wa.link/63g8kd"
-                  class="anchor-hover text-decoration-none anchor-text"
-                  >Web-development</a
-                >
-                <a
-                  href="https://wa.link/nptec6"
-                  class="anchor-hover text-decoration-none anchor-text"
-                  >Web-Designing</a
-                >
-                <a
-                  href="https://wa.link/hohd9p"
-                  class="anchor-hover text-decoration-none anchor-text"
-                  >All Web-Services</a
-                >
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              <div
-                class="first lh-lg text-dark"
-                data-aos="fade-up"
-                data-bs-duration="1000"
-              >
-                <h4 class="text-dark fw-bold pb-1">Contact</h4>
-                <p class="anchor-text anchor-hover">
-                  Muzammilmetar82@gmail.com
-                </p>
-                <p class="anchor-text anchor-hover">
-                  Address : 📍 Bhavnagar , IND
-                </p>
-                <p class="anchor-text anchor-hover">Phone : +91 7874536227</p>
-              </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="first lh-lg text-dark d-flex flex-column g-2" data-aos="fade-up" data-bs-duration="1000">
+              <h4 class="fw-bold pb-1">Info</h4>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">About Us</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">Contact Us</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">Privacy Policy</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">Terms & Conditions</a>
+              <a href="/testi.html" class="anchor-hover text-decoration-none anchor-text">Add Your Testimonial</a>
+              <a href="#" class="anchor-hover text-decoration-none anchor-text">FAQs & Help</a>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="container my-3" data-aos="fade-up" data-bs-duration="1000">
-        <hr class="border-warnings border-1 opacity-100" />
-        <div class="row">
-          <div
-            class="col-lg-12 text-center text-dark"
-            data-aos="fade-up"
-            data-bs-duration="1000"
-          >
-            <p>
-              <b
-                >Thanks &hearts; For &nbsp;
-                <span class="fs-3 fw-bold">Watching</span>
-              </b>
-            </p>
-            <hr class="border-warnings border-1 opacity-100" />
-            <p>
-              <b
-                >Made With &hearts; By &nbsp;
-                <span class="fs-3 fw-bold">Mujju</span>
-              </b>
-            </p>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="first lh-lg text-dark d-flex flex-column g-lg-2" data-aos="fade-up" data-bs-duration="1000">
+              <h4 class="fw-bold pb-1">Services</h4>
+              <a href="https://wa.link/63g8kd" class="anchor-hover text-decoration-none anchor-text">Web-development</a>
+              <a href="https://wa.link/nptec6" class="anchor-hover text-decoration-none anchor-text">Web-Designing</a>
+              <a href="https://wa.link/hohd9p" class="anchor-hover text-decoration-none anchor-text">All
+                Web-Services</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="first lh-lg text-dark" data-aos="fade-up" data-bs-duration="1000">
+              <h4 class="text-dark fw-bold pb-1">Contact</h4>
+              <p class="anchor-text anchor-hover">
+                Muzammilmetar82@gmail.com
+              </p>
+              <p class="anchor-text anchor-hover">
+                Address : 📍 Bhavnagar , IND
+              </p>
+              <p class="anchor-text anchor-hover">Phone : +91 7874536227</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- <script>
+    <div class="container my-3" data-aos="fade-up" data-bs-duration="1000">
+      <hr class="border-warnings border-1 opacity-100" />
+      <div class="row">
+        <div class="col-lg-12 text-center text-dark" data-aos="fade-up" data-bs-duration="1000">
+          <p>
+            <b>Thanks &hearts; For &nbsp;
+              <span class="fs-3 fw-bold">Watching</span>
+            </b>
+          </p>
+          <hr class="border-warnings border-1 opacity-100" />
+          <p>
+            <b>Made With &hearts; By &nbsp;
+              <span class="fs-3 fw-bold">Mujju</span>
+            </b>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script>
       function darkmode() {
         var element = document.body;
         element.classList.toggle("dark-mode");
       }
     </script> -->
 
-    <script>
-      $(".menu").click(function () {
-        $(".nav").slideToggle(1200);
-      });
+  <script>
+    $(".menu").click(function () {
+      $(".nav").slideToggle(1200);
+    });
 
-      // $(".profile").click(function () {
-      //   $(".icon-overlay-main").slideToggle(500);
-      // })
+    // $(".profile").click(function () {
+    //   $(".icon-overlay-main").slideToggle(500);
+    // })
 
-      // $("#theme").click(function () {
-      //   if ($("body").hasClass("day")) {
-      //     $(".moon").css("display", "flex");
-      //     $("body").removeClass("day");
-      //     $("body").addClass("night");
-      //     $(".sun").css("display", "none");
-      //     $(".moon").css("display", "flex");
-      //     $("header").css("background-color", "#292929");
-      //     $(".profile").css("box-shadow", " rgba(0, 0, 0, 0.35) 0px 5px 15px");
-      //     $("body").css("background-color", "#292929");
-      //     $("div").css("background-color", "#292929");
-      //     $(".over-icons").css("background-color", "#292929");
-      //     $("footer").css("background-color", "#3e3d3d");
-      //     $("a").css("color", "white");
-      //   } else {
-      //     $("body").removeClass("night");
-      //     $("body").addClass("day");
-      //     $(".moon").css("display", "none");
-      //     $(".sun").css("display", "flex");
-      //     $("header").css("background-color", "white");
-      //     $(".profile").css("box-shadow", " rgba(0, 0, 0, 0.35) 0px 5px 15px");
-      //     $("body").css("background-color", "white");
-      //     $("div").css("background-color", "white");
-      //     $(".over-icons").css("background-color", "white");
-      //     $("footer").css("background-color", "#FF0000");
-      //     $(".red").css("background-color", "#FF0000");
-      //     $("a").css("color", "black");
-      //   }
-      // });
-    </script>
-    <!-- 
+    // $("#theme").click(function () {
+    //   if ($("body").hasClass("day")) {
+    //     $(".moon").css("display", "flex");
+    //     $("body").removeClass("day");
+    //     $("body").addClass("night");
+    //     $(".sun").css("display", "none");
+    //     $(".moon").css("display", "flex");
+    //     $("header").css("background-color", "#292929");
+    //     $(".profile").css("box-shadow", " rgba(0, 0, 0, 0.35) 0px 5px 15px");
+    //     $("body").css("background-color", "#292929");
+    //     $("div").css("background-color", "#292929");
+    //     $(".over-icons").css("background-color", "#292929");
+    //     $("footer").css("background-color", "#3e3d3d");
+    //     $("a").css("color", "white");
+    //   } else {
+    //     $("body").removeClass("night");
+    //     $("body").addClass("day");
+    //     $(".moon").css("display", "none");
+    //     $(".sun").css("display", "flex");
+    //     $("header").css("background-color", "white");
+    //     $(".profile").css("box-shadow", " rgba(0, 0, 0, 0.35) 0px 5px 15px");
+    //     $("body").css("background-color", "white");
+    //     $("div").css("background-color", "white");
+    //     $(".over-icons").css("background-color", "white");
+    //     $("footer").css("background-color", "#FF0000");
+    //     $(".red").css("background-color", "#FF0000");
+    //     $("a").css("color", "black");
+    //   }
+    // });
+  </script>
+  <!-- 
     <div class="float position-fixed bg-white shadow border top-50 rounded-start-2" data-aos="fade-up" data-bs-duration="2000ms">
       <div class="socialicons p-2 bg-dark rounded-end-4">
         <div class="icon p-2">
@@ -1050,199 +753,196 @@
       </div>
     </div> -->
 
-    <script>
-      var wordsToType = document
-          .querySelector("span[words]")
-          .getAttribute("words")
-          .split(","),
-        typer = document.querySelector("span[words]"),
-        typingSpeed = parseInt(typer.getAttribute("typing-speed")) || 70,
-        typingDelay = parseInt(typer.getAttribute("typing-delay")) || 700;
+  <script>
+    var wordsToType = document
+      .querySelector("span[words]")
+      .getAttribute("words")
+      .split(","),
+      typer = document.querySelector("span[words]"),
+      typingSpeed = parseInt(typer.getAttribute("typing-speed")) || 70,
+      typingDelay = parseInt(typer.getAttribute("typing-delay")) || 700;
 
-      var currentWordIndex = 0,
-        currentCharacterIndex = 0;
+    var currentWordIndex = 0,
+      currentCharacterIndex = 0;
 
-      function type() {
-        var wordToType = wordsToType[currentWordIndex % wordsToType.length];
+    function type() {
+      var wordToType = wordsToType[currentWordIndex % wordsToType.length];
 
-        if (currentCharacterIndex < wordToType.length) {
-          typer.innerHTML += wordToType[currentCharacterIndex++];
-          setTimeout(type, typingSpeed);
-        } else {
-          setTimeout(erase, typingDelay);
-        }
+      if (currentCharacterIndex < wordToType.length) {
+        typer.innerHTML += wordToType[currentCharacterIndex++];
+        setTimeout(type, typingSpeed);
+      } else {
+        setTimeout(erase, typingDelay);
       }
-      function erase() {
-        var wordToType = wordsToType[currentWordIndex % wordsToType.length];
-        if (currentCharacterIndex > 0) {
-          typer.innerHTML = wordToType.substr(0, --currentCharacterIndex - 1);
-          setTimeout(erase, typingSpeed);
-        } else {
-          currentWordIndex++;
-          setTimeout(type, typingDelay);
-        }
+    }
+    function erase() {
+      var wordToType = wordsToType[currentWordIndex % wordsToType.length];
+      if (currentCharacterIndex > 0) {
+        typer.innerHTML = wordToType.substr(0, --currentCharacterIndex - 1);
+        setTimeout(erase, typingSpeed);
+      } else {
+        currentWordIndex++;
+        setTimeout(type, typingDelay);
       }
+    }
 
-      window.onload = function () {
-        type();
-      };
-    </script>
+    window.onload = function () {
+      type();
+    };
+  </script>
 
-    <script>
-      particlesJS("particles-js", {
-        particles: {
-          number: {
-            value: 30,
-            density: {
-              enable: true,
-              value_area: 800,
-            },
-          },
-          color: {
-            value: "#ff6362",
-          },
-          shape: {
-            type: "circle",
-            stroke: {
-              width: 0,
-              color: "#000000",
-            },
-            polygon: {
-              nb_sides: 6,
-            },
-            image: {
-              src: "img/github.svg",
-              width: 100,
-              height: 100,
-            },
-          },
-          opacity: {
-            value: 0.5,
-            random: false,
-            anim: {
-              enable: false,
-              speed: 1,
-              opacity_min: 0.1,
-              sync: false,
-            },
-          },
-          size: {
-            value: 3,
-            random: true,
-            anim: {
-              enable: false,
-              speed: 40,
-              size_min: 0.1,
-              sync: false,
-            },
-          },
-          line_linked: {
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 30,
+          density: {
             enable: true,
-            distance: 150,
-            color: "#ff6362",
-            opacity: 0.4,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 6,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: {
-              enable: false,
-              rotateX: 600,
-              rotateY: 1200,
-            },
+            value_area: 800,
           },
         },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: {
-              enable: true,
-              mode: "grab",
-            },
-            onclick: {
-              enable: false,
-              mode: "push",
-            },
-            resize: true,
+        color: {
+          value: "#ff6362",
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000",
           },
-          modes: {
-            grab: {
-              distance: 130,
-              line_linked: {
-                opacity: 1,
-              },
-            },
-            bubble: {
-              distance: 400,
-              size: 40,
-              duration: 2,
-              opacity: 8,
-              speed: 3,
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.4,
-            },
-            push: {
-              particles_nb: 4,
-            },
-            remove: {
-              particles_nb: 2,
-            },
+          polygon: {
+            nb_sides: 6,
+          },
+          image: {
+            src: "img/github.svg",
+            width: 100,
+            height: 100,
           },
         },
-        retina_detect: true,
-      });
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false,
+          },
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 40,
+            size_min: 0.1,
+            sync: false,
+          },
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ff6362",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 6,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200,
+          },
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "grab",
+          },
+          onclick: {
+            enable: false,
+            mode: "push",
+          },
+          resize: true,
+        },
+        modes: {
+          grab: {
+            distance: 130,
+            line_linked: {
+              opacity: 1,
+            },
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+          push: {
+            particles_nb: 4,
+          },
+          remove: {
+            particles_nb: 2,
+          },
+        },
+      },
+      retina_detect: true,
+    });
 
-      /* ---- stats.js config ---- */
+    /* ---- stats.js config ---- */
 
-      var count_particles, stats, update;
-      stats = new Stats();
-      stats.setMode(0);
-      stats.domElement.style.position = "absolute";
-      stats.domElement.style.left = "0px";
-      stats.domElement.style.top = "0px";
-      document.body.appendChild(stats.domElement);
-      count_particles = document.querySelector(".js-count-particles");
-      update = function () {
-        stats.begin();
-        stats.end();
-        if (
-          window.pJSDom[0].pJS.particles &&
-          window.pJSDom[0].pJS.particles.array
-        ) {
-          count_particles.innerText =
-            window.pJSDom[0].pJS.particles.array.length;
-        }
-        requestAnimationFrame(update);
-      };
+    var count_particles, stats, update;
+    stats = new Stats();
+    stats.setMode(0);
+    stats.domElement.style.position = "absolute";
+    stats.domElement.style.left = "0px";
+    stats.domElement.style.top = "0px";
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector(".js-count-particles");
+    update = function () {
+      stats.begin();
+      stats.end();
+      if (
+        window.pJSDom[0].pJS.particles &&
+        window.pJSDom[0].pJS.particles.array
+      ) {
+        count_particles.innerText =
+          window.pJSDom[0].pJS.particles.array.length;
+      }
       requestAnimationFrame(update);
-    </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      AOS.init();
-    </script>
+    };
+    requestAnimationFrame(update);
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
-      $(window).on("load", function () {
-        $(".container-fluids").fadeOut(1500);
-      });
-    </script>
-    <!-- <script>
+  <script>
+    $(window).on("load", function () {
+      $(".container-fluids").fadeOut(1500);
+    });
+  </script>
+  <!-- <script>
       var main = document.querySelector("#main")
       var crsr = document.querySelector(".cursor")
 
@@ -1264,162 +964,183 @@
 
     </script> -->
 
-    <!-- <script type="text/javascript">
+  <!-- <script type="text/javascript">
   document.getElementById('mujju').style.cursor = 'none';
   document.querySelector(".cursor").style.cursor = 'none';
   document.querySelector(".name").style.cursor = 'none';
 </script> -->
 
-    <script>
-      const cursor = document.querySelector(".cursor");
+  <script>
+    const cursor = document.querySelector(".cursor");
 
-      document.addEventListener("mousemove", (e) => {
-        cursor.setAttribute(
-          "style",
-          "top: " + (e.pageY - 65) + "px; left: " + (e.pageX - 25) + "px;"
-        );
-      });
+    document.addEventListener("mousemove", (e) => {
+      cursor.setAttribute(
+        "style",
+        "top: " + (e.pageY - 65) + "px; left: " + (e.pageX - 25) + "px;"
+      );
+    });
 
-      document.addEventListener("click", (e) => {
-        cursor.classList.add("expand");
-        setTimeout(() => {
-          cursor.classList.remove("expand");
-        }, 500);
-      });
-    </script>
+    document.addEventListener("click", (e) => {
+      cursor.classList.add("expand");
+      setTimeout(() => {
+        cursor.classList.remove("expand");
+      }, 500);
+    });
+  </script>
 
-    <script>
-      (function ($) {
-        $(document).ready(function () {
-          $(".animated-background").each(function (index) {
-            var cnv = $("<canvas></canvas>").attr("id", "can" + index);
+  <script>
+    (function ($) {
+      $(document).ready(function () {
+        $(".animated-background").each(function (index) {
+          var cnv = $("<canvas></canvas>").attr("id", "can" + index);
 
-            var colorToUse = $(this).attr("data-color");
+          var colorToUse = $(this).attr("data-color");
+          if (colorToUse === "red") {
+            colorRange = ["rgba(206, 23, 41, 0)", "rgba(193, 23, 43, 0)"];
+            strokeColor = "rgba(206, 23, 41, 1)";
+          } else {
+            colorRange = [
+              "rgba(245, 245, 245, alp)",
+              "rgba(229, 229, 229, alp)",
+            ];
+            strokeColor = "rgba(245,245,245, 0.5)";
+          }
+
+          $(this).prepend(cnv);
+
+          var can = document.getElementById("can" + index);
+          var w = (can.width = $(this).width()),
+            h = (can.height = $(this).height()),
+            sum = w + h,
+            ctx = can.getContext("2d"),
+            opts = {
+              side: 16,
+              picksParTick: 8, //originally 5
+              baseTime: 200,
+              addedTime: 5,
+              colors: colorRange,
+              addedAlpha: 1,
+              strokeColor: strokeColor,
+              hueSpeed: 0.5,
+              repaintAlpha: 5,
+            },
+            difX = (Math.sqrt(3) * opts.side) / 2,
+            difY = (opts.side * 3) / 2,
+            rad = Math.PI / 6,
+            cos = Math.cos(rad) * opts.side,
+            sin = Math.sin(rad) * opts.side,
+            hexs = [],
+            tick = 0;
+
+          function loop() {
+            window.requestAnimationFrame(loop);
+
+            tick += opts.hueSpeed;
+
+            ctx.shadowBlur = 0;
+
+            var backColor;
             if (colorToUse === "red") {
-              colorRange = ["rgba(206, 23, 41, 0)", "rgba(193, 23, 43, 0)"];
-              strokeColor = "rgba(206, 23, 41, 1)";
+              backColor = "rgba(232, 28, 47, 0.9)";
             } else {
-              colorRange = [
-                "rgba(245, 245, 245, alp)",
-                "rgba(229, 229, 229, alp)",
-              ];
-              strokeColor = "rgba(245,245,245, 0.5)";
+              backColor = "rgba(225, 225, 225, 0.5)";
             }
+            ctx.fillStyle = backColor.replace("alp", opts.repaintAlpha);
+            ctx.fillRect(0, 0, w, h);
 
-            $(this).prepend(cnv);
+            for (var i = 0; i < opts.picksParTick; ++i)
+              hexs[(Math.random() * hexs.length) | 0].pick();
 
-            var can = document.getElementById("can" + index);
-            var w = (can.width = $(this).width()),
-              h = (can.height = $(this).height()),
-              sum = w + h,
-              ctx = can.getContext("2d"),
-              opts = {
-                side: 16,
-                picksParTick: 8, //originally 5
-                baseTime: 200,
-                addedTime: 5,
-                colors: colorRange,
-                addedAlpha: 1,
-                strokeColor: strokeColor,
-                hueSpeed: 0.5,
-                repaintAlpha: 5,
-              },
-              difX = (Math.sqrt(3) * opts.side) / 2,
-              difY = (opts.side * 3) / 2,
-              rad = Math.PI / 6,
-              cos = Math.cos(rad) * opts.side,
-              sin = Math.sin(rad) * opts.side,
-              hexs = [],
-              tick = 0;
+            hexs.map(function (hex) {
+              hex.step();
+            });
+          }
 
-            function loop() {
-              window.requestAnimationFrame(loop);
+          function Hex(x, y) {
+            this.x = x;
+            this.y = y;
+            this.sum = this.x + this.y;
+            // change between false and true to animate from left to right, or all at once
+            this.picked = false;
+            this.time = 0;
+            this.targetTime = 0;
 
-              tick += opts.hueSpeed;
+            this.xs = [
+              this.x + cos,
+              this.x,
+              this.x - cos,
+              this.x - cos,
+              this.x,
+              this.x + cos,
+            ];
+            this.ys = [
+              this.y - sin,
+              this.y - opts.side,
+              this.y - sin,
+              this.y + sin,
+              this.y + opts.side,
+              this.y + sin,
+            ];
+          }
+          Hex.prototype.pick = function () {
+            this.color =
+              opts.colors[(Math.random() * opts.colors.length) | 0];
+            this.picked = true;
+            this.time = this.time || 0;
+            this.targetTime =
+              this.targetTime ||
+              (opts.baseTime + opts.addedTime * Math.random()) | 0;
+          };
+          Hex.prototype.step = function () {
+            var prop = this.time / this.targetTime;
 
-              ctx.shadowBlur = 0;
+            ctx.beginPath();
+            ctx.moveTo(this.xs[0], this.ys[0]);
+            for (var i = 1; i < this.xs.length; ++i)
+              ctx.lineTo(this.xs[i], this.ys[i]);
+            ctx.lineTo(this.xs[0], this.ys[0]);
 
-              var backColor;
-              if (colorToUse === "red") {
-                backColor = "rgba(232, 28, 47, 0.9)";
-              } else {
-                backColor = "rgba(225, 225, 225, 0.5)";
+            if (this.picked) {
+              ++this.time;
+
+              if (this.time >= this.targetTime) {
+                this.time = 0;
+                this.targetTime = 0;
+                this.picked = false;
               }
-              ctx.fillStyle = backColor.replace("alp", opts.repaintAlpha);
-              ctx.fillRect(0, 0, w, h);
 
-              for (var i = 0; i < opts.picksParTick; ++i)
-                hexs[(Math.random() * hexs.length) | 0].pick();
+              ctx.fillStyle = ctx.shadowColor = this.color.replace(
+                "alp",
+                Math.sin(prop * Math.PI)
+              );
+              ctx.fill();
+            } else {
+              ctx.strokeStyle = ctx.shadowColor = opts.strokeColor;
+              ctx.stroke();
+            }
+          };
 
-              hexs.map(function (hex) {
-                hex.step();
-              });
+          for (var x = 0; x < w; x += difX * 2) {
+            var i = 0;
+
+            for (var y = 0; y < h; y += difY) {
+              ++i;
+              hexs.push(new Hex(x + difX * (i % 2), y));
+            }
+          }
+          loop();
+
+          window.addEventListener("resize", function () {
+            w = can.width = window.innerWidth;
+            h = can.height = window.innerHeight;
+            sum = w + h;
+
+            if (can.width < window.innerWidth) {
+              can.alpha = 0.5;
+              can.opacity = 0.5;
             }
 
-            function Hex(x, y) {
-              this.x = x;
-              this.y = y;
-              this.sum = this.x + this.y;
-              // change between false and true to animate from left to right, or all at once
-              this.picked = false;
-              this.time = 0;
-              this.targetTime = 0;
-
-              this.xs = [
-                this.x + cos,
-                this.x,
-                this.x - cos,
-                this.x - cos,
-                this.x,
-                this.x + cos,
-              ];
-              this.ys = [
-                this.y - sin,
-                this.y - opts.side,
-                this.y - sin,
-                this.y + sin,
-                this.y + opts.side,
-                this.y + sin,
-              ];
-            }
-            Hex.prototype.pick = function () {
-              this.color =
-                opts.colors[(Math.random() * opts.colors.length) | 0];
-              this.picked = true;
-              this.time = this.time || 0;
-              this.targetTime =
-                this.targetTime ||
-                (opts.baseTime + opts.addedTime * Math.random()) | 0;
-            };
-            Hex.prototype.step = function () {
-              var prop = this.time / this.targetTime;
-
-              ctx.beginPath();
-              ctx.moveTo(this.xs[0], this.ys[0]);
-              for (var i = 1; i < this.xs.length; ++i)
-                ctx.lineTo(this.xs[i], this.ys[i]);
-              ctx.lineTo(this.xs[0], this.ys[0]);
-
-              if (this.picked) {
-                ++this.time;
-
-                if (this.time >= this.targetTime) {
-                  this.time = 0;
-                  this.targetTime = 0;
-                  this.picked = false;
-                }
-
-                ctx.fillStyle = ctx.shadowColor = this.color.replace(
-                  "alp",
-                  Math.sin(prop * Math.PI)
-                );
-                ctx.fill();
-              } else {
-                ctx.strokeStyle = ctx.shadowColor = opts.strokeColor;
-                ctx.stroke();
-              }
-            };
-
+            hexs.length = 0;
             for (var x = 0; x < w; x += difX * 2) {
               var i = 0;
 
@@ -1428,32 +1149,12 @@
                 hexs.push(new Hex(x + difX * (i % 2), y));
               }
             }
-            loop();
-
-            window.addEventListener("resize", function () {
-              w = can.width = window.innerWidth;
-              h = can.height = window.innerHeight;
-              sum = w + h;
-
-              if (can.width < window.innerWidth) {
-                can.alpha = 0.5;
-                can.opacity = 0.5;
-              }
-
-              hexs.length = 0;
-              for (var x = 0; x < w; x += difX * 2) {
-                var i = 0;
-
-                for (var y = 0; y < h; y += difY) {
-                  ++i;
-                  hexs.push(new Hex(x + difX * (i % 2), y));
-                }
-              }
-            });
           });
         });
-      })(jQuery);
-      F;
-    </script>
-  </body>
+      });
+    })(jQuery);
+    F;
+  </script>
+</body>
+
 </html>
