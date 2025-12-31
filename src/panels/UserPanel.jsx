@@ -627,7 +627,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Home, User, Briefcase, Award, MessageSquare, Mail, Moon, Sun, ArrowRight, Star } from "lucide-react";
 
-const API = "http://localhost:5000/api";
+const API = "https://muju-api.vercel.app/api";
 
 export default function Portfolio() {
     const [profile, setProfile] = useState(null);
