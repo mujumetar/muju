@@ -746,6 +746,7 @@ export default function Portfolio() {
         { id: "contact", label: "Contact", icon: <Mail className="w-4 h-4" /> },
     ];
 
+    const logotitle = "< Muzammil />"
     return (
         <div className={`${darkMode ? "dark" : ""}`}>
             <div className="min-h-screen bg-background text-foreground scroll-smooth">
@@ -756,7 +757,7 @@ export default function Portfolio() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"
                 >
-                    <span className="text-sm text-muted-foreground font-medium">{timezone}</span>
+                    <span className="text-sm text-muted-foreground font-medium">{logotitle}</span>
                     <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-1 bg-card/80 backdrop-blur-xl border border-border rounded-full px-2 py-1.5 shadow-soft">
                         {navItems.map((item) => (
                             <Link
