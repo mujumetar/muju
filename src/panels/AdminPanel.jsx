@@ -369,7 +369,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:5000/api";
+const API = "https://muju-api.vercel.app/api";
+
 
 export default function AdminPage() {
   /* ================= AUTH ================= */
