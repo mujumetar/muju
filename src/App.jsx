@@ -12,7 +12,7 @@ export default function App() {
         <Route path="/" element={<UserPanel />} />
 
         {/* ADMIN PANEL */}
-        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/muju" element={<AdminPage />} />
 
         {/* FALLBACK */}
         <Route path="*" element={<Navigate to="/" />} />
