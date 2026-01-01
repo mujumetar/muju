@@ -61,7 +61,7 @@ export default function Loader() {
   const [visible, setVisible] = useState(true);
   const [progress, setProgress] = useState(0);
 
-  const logoText = "< Muzammil />";
+  const logoText = "< Webers.iorg />";
 
   useEffect(() => {
     const startTime = Date.now();
@@ -86,7 +86,7 @@ export default function Loader() {
 
       {/* Logo with Glitch */}
       <div className="relative text-4xl md:text-5xl font-extrabold text-black tracking-wider mb-8 overflow-hidden ">
-        <span className="relative z-10 glitch" data-text={logoText}>
+        <span className="relative z-10 glitch font-primary" data-text={logoText}>
           {logoText}
         </span>
       </div>
