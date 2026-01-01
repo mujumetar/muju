@@ -136,7 +136,7 @@ export default function Portfolio() {
                     className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"
                 >
                     <span className="text-sm text-muted-foreground font-medium">{logotitle}</span>
-                    <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-1 bg-card/80 backdrop-blur-xl border border-border rounded-full px-2 py-1.5 shadow-soft">
+                    <div className="absolute left-1/2 top-15 -translate-x-1/2 flex items-center gap-1 bg-card/80 backdrop-blur-xl  border border-border rounded-full px-2 py-1.5 shadow-soft">
                         {navItems.map((item) => (
                             <Link
                                 key={item.id}
@@ -144,7 +144,7 @@ export default function Portfolio() {
                                 smooth={true}
                                 duration={500}
                                 spy={true}
-                                className={`relative flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium cursor-pointer transition-all duration-300 ${activeSection === item.id
+                                className={`relative flex items-center gap-2 px-4 my-0 py-2 rounded-full text-sm font-medium cursor-pointer transition-all duration-300 ${activeSection === item.id
                                     ? "bg-secondary text-foreground"
                                     : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
                                     }`}
@@ -250,7 +250,7 @@ export default function Portfolio() {
                 >
                     <div className="max-w-5xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">Featured Projects</h2>
-                        <div className="space-y-8 grid grid-cols-3">
+                        <div className="space-y-8 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                             {projects.map((p, index) => (
                                 <motion.article
                                     key={p._id}

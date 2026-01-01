@@ -85,14 +85,14 @@ export default function Loader() {
     <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white/10 backdrop-blur-md transition-opacity duration-700 animate-fadeIn">
 
       {/* Logo with Glitch */}
-      <div className="relative text-4xl md:text-5xl font-extrabold text-black tracking-wider mb-8 overflow-hidden font-mono">
+      <div className="relative text-4xl md:text-5xl font-extrabold text-black tracking-wider mb-8 overflow-hidden ">
         <span className="relative z-10 glitch" data-text={logoText}>
           {logoText}
         </span>
       </div>
 
       {/* Fully Black Progress Bar */}
-      <div className="w-64 h-2 rounded-full bg-black/10 overflow-hidden relative mb-6">
+      <div className="w-64 h-0.5 rounded-full bg-black/10 overflow-hidden relative mb-6">
         <div
           className="h-full bg-black transition-all duration-300 ease-out"
           style={{ width: `${progress}%` }}
