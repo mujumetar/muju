@@ -237,6 +237,8 @@ export default function Portfolio() {
                     </section>
                 )}
 
+                
+
                 {/* PROJECTS */}
                 <motion.section
                     id="projects"
@@ -248,7 +250,7 @@ export default function Portfolio() {
                 >
                     <div className="max-w-5xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">Featured Projects</h2>
-                        <div className="space-y-8">
+                        <div className="space-y-8 grid grid-cols-3">
                             {projects.map((p, index) => (
                                 <motion.article
                                     key={p._id}
