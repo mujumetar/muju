@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, useTransform } from "framer-motion";
 import { Home, User, Briefcase, Award, MessageSquare, Mail, Moon, Sun, ArrowRight, Star } from "lucide-react";
+import GlobalParallax3D from "../assets/components/GlobalParallax3D";
+import { useScroll3D } from "../assets/components/Scroll3DProvider";
+// import FloatingDecorations from "../assets/components/FloatingDecorations";
 
 const API = "https://muju-api.vercel.app/api";
 
@@ -17,6 +20,10 @@ export default function Portfolio() {
     const [time, setTime] = useState("");
     const [timezone, setTimezone] = useState("");
     const [activeSection, setActiveSection] = useState("hero");
+    const { scrollYProgress } = useScroll3D();
+
+    const heroY = useTransform(scrollYProgress, [0, 0.2], [0, -80]);
+    const heroRotateX = useTransform(scrollYProgress, [0, 0.2], [0, 8]);
 
     useEffect(() => {
         fetchProfile();
@@ -124,10 +131,12 @@ export default function Portfolio() {
         { id: "contact", label: "Contact", icon: <Mail className="w-4 h-4" /> },
     ];
 
+
     const logotitle = "< Muzammil />"
     return (
         <div className={`${darkMode ? "dark" : ""}`}>
             <div className="min-h-screen bg-background text-foreground scroll-smooth">
+                <GlobalParallax3D />
                 {/* NAVBAR */}
                 <motion.nav
                     initial={{ opacity: 0, y: -20 }}
@@ -166,6 +175,7 @@ export default function Portfolio() {
                 {/* HERO */}
                 {profile && (
                     <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 pt-20 gradient-hero">
+                        {/* <FloatingDecorations/> */}
                         <div className="max-w-3xl mx-auto text-center">
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
@@ -173,17 +183,23 @@ export default function Portfolio() {
                                 transition={{ duration: 0.6 }}
                                 className="inline-flex items-center gap-2 mb-8"
                             >
-                                <span className="badge-pill">{profile.title}</span>
+                                <span className="badge-pill ">{profile.title}</span>
                                 <span className="badge-pill">Available for work</span>
                             </motion.div>
                             <motion.h1
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.1 }}
-                                className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1] mb-6"
+                                className="text-3xl font-primary md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1] mb-6"
+                                style={{
+                                    y: heroY,
+                                    rotateX: heroRotateX,
+                                    transformStyle: "preserve-3d",
+                                }}
                             >
                                 {profile.name}
                             </motion.h1>
+
                             <motion.p
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -237,7 +253,7 @@ export default function Portfolio() {
                     </section>
                 )}
 
-                
+
 
                 {/* PROJECTS */}
                 <motion.section

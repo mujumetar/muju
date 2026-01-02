@@ -85,8 +85,8 @@ export default function Loader() {
     <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white/10 backdrop-blur-md transition-opacity duration-700 animate-fadeIn">
 
       {/* Logo with Glitch */}
-      <div className="relative text-4xl md:text-5xl font-extrabold text-black tracking-wider mb-8 overflow-hidden ">
-        <span className="relative z-10 glitch font-primary" data-text={logoText}>
+      <div className="relative font-text-4xl font-primary md:text-6xl font-extrabold text-black tracking-wider mb-8 overflow-hidden ">
+        <span className="relative z-10 glitch font-text-3xl font-primary md:text-6xl" data-text={logoText}>
           {logoText}
         </span>
       </div>

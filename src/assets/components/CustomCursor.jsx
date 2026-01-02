@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const RING_SIZE = 32;
 
@@ -20,28 +20,32 @@ export default function CustomCursor() {
             mouseX = e.clientX;
             mouseY = e.clientY;
 
-            // DOT ALWAYS CENTERED
+            if (!dotRef.current) return;
+
             dotRef.current.style.transform = `
         translate3d(${mouseX - 3}px, ${mouseY - 3}px, 0)
       `;
         };
 
         const animate = () => {
+            if (!ringRef.current) {
+                raf = requestAnimationFrame(animate);
+                return;
+            }
+
             ringX += (mouseX - ringX) * 0.3;
             ringY += (mouseY - ringY) * 0.3;
 
             const isHover = hoveringRef.current;
 
             ringRef.current.style.transform = `
-    translate3d(
-      ${ringX - RING_SIZE / 2}px,
-      ${ringY - RING_SIZE / 2}px,
-      0
-    )
-    scale(${isHover ? 1.3 : 1})
-  `;
-
-            ringRef.current.style.borderWidth = isHover ? "1px" : "1px";
+        translate3d(
+          ${ringX - RING_SIZE / 2}px,
+          ${ringY - RING_SIZE / 2}px,
+          0
+        )
+        scale(${isHover ? 1.3 : 1})
+      `;
 
             ringRef.current.style.boxShadow = isHover
                 ? "0 0 0 10px rgba(0,0,0,0.15), 0 0 20px rgba(0,0,0,0.25)"
@@ -49,25 +53,37 @@ export default function CustomCursor() {
 
             raf = requestAnimationFrame(animate);
         };
-
+        window.addEventListener("mouseleave", () => {
+            ringRef.current.style.opacity = 0;
+        });
+        window.addEventListener("mouseenter", () => {
+            ringRef.current.style.opacity = 1;
+        });
 
         const onEnter = () => (hoveringRef.current = true);
         const onLeave = () => (hoveringRef.current = false);
 
         window.addEventListener("mousemove", move);
 
-        document
-            .querySelectorAll("a, button, input, textarea, .card-hover")
-            .forEach((el) => {
-                el.addEventListener("mouseenter", onEnter);
-                el.addEventListener("mouseleave", onLeave);
-            });
+        const hoverTargets = document.querySelectorAll(
+            "a, button, input, textarea, .card-hover"
+        );
 
-        animate();
+        hoverTargets.forEach((el) => {
+            el.addEventListener("mouseenter", onEnter);
+            el.addEventListener("mouseleave", onLeave);
+        });
+
+        raf = requestAnimationFrame(animate);
 
         return () => {
             cancelAnimationFrame(raf);
             window.removeEventListener("mousemove", move);
+
+            hoverTargets.forEach((el) => {
+                el.removeEventListener("mouseenter", onEnter);
+                el.removeEventListener("mouseleave", onLeave);
+            });
         };
     }, []);
 
@@ -76,6 +92,7 @@ export default function CustomCursor() {
             {/* DOT */}
             <div
                 ref={dotRef}
+                className="text-foreground"
                 style={{
                     position: "fixed",
                     top: 0,
@@ -88,7 +105,6 @@ export default function CustomCursor() {
                     zIndex: 9999,
                     willChange: "transform",
                 }}
-                className="text-foreground"
             />
 
             {/* RING */}
@@ -106,9 +122,8 @@ export default function CustomCursor() {
                     zIndex: 9998,
                     transformOrigin: "center",
                     willChange: "transform",
-                    transition: "box-shadow 0.2s ease, border-width 0.2s ease",
+                    transition: "box-shadow 0.2s ease",
                 }}
-
             />
         </>
     );
